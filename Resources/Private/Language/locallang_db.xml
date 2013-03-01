@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'd3_evgtools'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+            
+			<label index="tx_d3evgtools_domain_model_bookslider">Book Slider</label>
+			<label index="tx_d3evgtools_domain_model_bookslider.image">Image</label>
+			<label index="tx_d3evgtools_domain_model_bookslider.link">Link</label>
+
+			<label index="tx_d3evgtools_domain_model_cntbookslider">Cnt Book Slider</label>
+			<label index="tx_d3evgtools_domain_model_cntbookslider.book_sliders">Book Sliders</label>
+			<label index="tt_content.tx_extbase_type.Tx_D3Evgtools_CntBookSlider">EVG Tools CntBookSlider</label>
+			
+			<label index="tx_d3evgtools_domain_model_cntcntslider">Cnt Cnt Slider</label>
+			<label index="tx_d3evgtools_domain_model_cntcntslider.content_sliders">Content Sliders</label>
+			<label index="tt_content.tx_extbase_type.Tx_D3Evgtools_CntCntSlider">EVG Tools CntCntSlider</label>
+			
+			<label index="tx_d3evgtools_domain_model_contentslider">Content Slider</label>
+			<label index="tx_d3evgtools_domain_model_contentslider.name">Name</label>
+			<label index="tx_d3evgtools_domain_model_contentslider.content">Content</label>
+
+			<label index="tx_d3evgtools_domain_model_cntrandom">Cnt Random</label>
+			<label index="tx_d3evgtools_domain_model_cntrandom.count">Count</label>
+			<label index="tx_d3evgtools_domain_model_cntrandom.random_contents">Random Contents</label>
+			<label index="tx_d3evgtools_domain_model_cntrandom.random_pages">Random Pages</label>
+			<label index="tt_content.tx_extbase_type.Tx_D3Evgtools_CntRandom">EVG Tools CntRandom</label>
+			
+			<label index="tx_d3evgtools_domain_model_randomcontent">Random Content</label>
+			<label index="tx_d3evgtools_domain_model_randomcontent.name">Name</label>
+			<label index="tx_d3evgtools_domain_model_randomcontent.content">Content</label>
+			<label index="tx_d3evgtools_domain_model_randomcontent.colpos">Colpos</label>
+			<label index="tx_d3evgtools_domain_model_randomcontent.page">Page</label>
+
+			<label index="tx_d3evgtools_domain_model_randompage">Random Page</label>
+			<label index="tx_d3evgtools_domain_model_randompage.name">Name</label>
+			<label index="tx_d3evgtools_domain_model_randompage.page">Page</label>
+			<label index="tx_d3evgtools_domain_model_randompage.colpos">Colpos</label>
+
+			<label index="tx_d3evgtools_domain_model_content">Content</label>
+			<label index="tt_content.tx_extbase_type.Tx_D3Evgtools_Content">EVG Tools Content</label>
+			
+			<label index="tx_d3evgtools_domain_model_cntaccordion">Cnt Accordion</label>
+			<label index="tx_d3evgtools_domain_model_cntaccordion.active_tab">Active Tab</label>
+			<label index="tx_d3evgtools_domain_model_cntaccordion.accordion_contents">Accordion Contents</label>
+			<label index="tt_content.tx_extbase_type.Tx_D3Evgtools_CntAccordion">EVG Tools CntAccordion</label>
+			
+			<label index="tx_d3evgtools_domain_model_accordioncontent">Accordion Content</label>
+			<label index="tx_d3evgtools_domain_model_accordioncontent.name">Name</label>
+			<label index="tx_d3evgtools_domain_model_accordioncontent.title">Title</label>
+			<label index="tx_d3evgtools_domain_model_accordioncontent.content">Content</label>
+
+		</languageKey>
+	</data>
+</T3locallang>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the EVG Tools extension in the FRONTEND</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_d3evgtools_domain_model_bookslider">BookSlider</label>
+			<label index="tx_d3evgtools_domain_model_bookslider.image">SliderBild</label>
+			<label index="tx_d3evgtools_domain_model_bookslider.link">Link</label>
+			<label index="tx_d3evgtools_domain_model_cntbookslider">CntBookSlider</label>
+			<label index="tx_d3evgtools_domain_model_cntbookslider.book_sliders">bookSliders</label>
+			<label index="tx_d3evgtools_domain_model_cntcntslider">CntCntSlider</label>
+			<label index="tx_d3evgtools_domain_model_cntcntslider.content_sliders">contentSliders</label>
+			<label index="tx_d3evgtools_domain_model_contentslider">ContentSlider</label>
+			<label index="tx_d3evgtools_domain_model_contentslider.name">Name</label>
+			<label index="tx_d3evgtools_domain_model_contentslider.content">Inhaltselement</label>
+			<label index="tx_d3evgtools_domain_model_cntrandom">CntRandom</label>
+			<label index="tx_d3evgtools_domain_model_cntrandom.count">Anzahl der Zufallsinhalte</label>
+			<label index="tx_d3evgtools_domain_model_cntrandom.random_contents">randomContents</label>
+			<label index="tx_d3evgtools_domain_model_cntrandom.random_pages">randomPages</label>
+			<label index="tx_d3evgtools_domain_model_randomcontent">RandomContent</label>
+			<label index="tx_d3evgtools_domain_model_randomcontent.name">name</label>
+			<label index="tx_d3evgtools_domain_model_randomcontent.content">content</label>
+			<label index="tx_d3evgtools_domain_model_randomcontent.colpos">Spalte</label>
+			<label index="tx_d3evgtools_domain_model_randomcontent.page">Seite</label>
+			<label index="tx_d3evgtools_domain_model_randompage">RandomPage</label>
+			<label index="tx_d3evgtools_domain_model_randompage.name">Name</label>
+			<label index="tx_d3evgtools_domain_model_randompage.page">Seite</label>
+			<label index="tx_d3evgtools_domain_model_randompage.colpos">Spalte</label>
+			<label index="tx_d3evgtools_domain_model_content">Content</label>
+			<label index="tx_d3evgtools_domain_model_cntaccordion">CntAccordion</label>
+			<label index="tx_d3evgtools_domain_model_cntaccordion.active_tab">activeTab</label>
+			<label index="tx_d3evgtools_domain_model_cntaccordion.accordion_contents">accordionContents</label>
+			<label index="tx_d3evgtools_domain_model_accordioncontent">AccordionContent</label>
+			<label index="tx_d3evgtools_domain_model_accordioncontent.name">name</label>
+			<label index="tx_d3evgtools_domain_model_accordioncontent.title">Title Text</label>
+			<label index="tx_d3evgtools_domain_model_accordioncontent.content">content</label>
+			<label index="tx_d3evgtools_domain_model_contentbookslider">ContentBookSlider</label>
+			<label index="tx_d3evgtools_domain_model_contentbookslider.book_sliders">bookSliders</label>
+			<label index="tx_d3evgtools_domain_model_contentcontslider">ContentContSlider</label>
+			<label index="tx_d3evgtools_domain_model_contentcontslider.content_sliders">contentSliders</label>
+			<label index="tx_d3evgtools_domain_model_contentrandom">ContentRandom</label>
+			<label index="tx_d3evgtools_domain_model_contentrandom.count">Anzahl der Zufallsinhalte</label>
+			<label index="tx_d3evgtools_domain_model_contentrandom.random_contents">randomContents</label>
+			<label index="tx_d3evgtools_domain_model_contentrandom.random_pages">randomPages</label>
+			<label index="tx_d3evgtools_domain_model_contentcontentslider">ContentContentSlider</label>
+			<label index="tx_d3evgtools_domain_model_contentcontentslider.content_sliders">contentSliders</label>
+			<label index="tx_d3evgtools_domain_model_contentcontentrandom">ContentContentRandom</label>
+			<label index="tx_d3evgtools_domain_model_contentcontentrandom.count">Anzahl der Zufallsinhalte</label>
+			<label index="tx_d3evgtools_domain_model_contentcontentrandom.random_contents">randomContents</label>
+			<label index="tx_d3evgtools_domain_model_contentcontentrandom.random_pages">randomPages</label>
+		</languageKey>
+	</data>
+</T3locallang>

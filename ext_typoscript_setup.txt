@@ -1,0 +1,42 @@
+config.tx_extbase{
+    persistence{
+        classes{
+
+            Tx_D3Evgtools_Domain_Model_CntBookSlider {
+                mapping {
+                    tableName = tt_content
+                    recordType = Tx_D3Evgtools_CntBookSlider
+                }
+            }
+            
+            Tx_D3Evgtools_Domain_Model_CntCntSlider {
+                mapping {
+                    tableName = tt_content
+                    recordType = Tx_D3Evgtools_CntCntSlider
+                }
+            }
+            
+            Tx_D3Evgtools_Domain_Model_CntRandom {
+                mapping {
+                    tableName = tt_content
+                    recordType = Tx_D3Evgtools_CntRandom
+                }
+            }
+            
+            Tx_D3Evgtools_Domain_Model_Content {
+                mapping {
+                    tableName = tt_content
+                    //recordType = Tx_D3Evgtools_Content
+                }
+            }
+            
+            Tx_D3Evgtools_Domain_Model_CntAccordion {
+                mapping {
+                    tableName = tt_content
+                    recordType = Tx_D3Evgtools_CntAccordion
+                }
+            }
+            
+    	}
+    }
+}

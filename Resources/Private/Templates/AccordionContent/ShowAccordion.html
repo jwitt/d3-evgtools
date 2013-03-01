@@ -1,0 +1,45 @@
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+<f:debug title="pcat">{contents}</f:debug>
+	
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+<div id="" class="row">
+	<ul class="accordion">
+  <li class="active">
+    <div class="title">
+      <h5>Accordion Panel 1</h5>
+    </div>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </li>
+  <li>
+
+<f:section name="main">
+	<ul class="accordion">
+	<f:for each="{contents}" as="content">
+		<f:if condition="{0:activeTab} == {0:content.tabId}">
+			<f:then><li class="active"></f:then>
+			<f:else><li></f:else>
+		</f:if>	
+			<div class="title">	
+				<f:format.html>{content.title}</f:format.html>
+			</div>
+			<div class="content">	
+				<f:cObject typoscriptObjectPath="plugin.tx_d3evgtools.settings.contentObject" data='{content.content}' />
+			</div>	
+		</li>
+	</f:for>
+	</ul>		
+</f:section>

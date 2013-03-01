@@ -1,0 +1,14 @@
+plugin.tx_d3evgtools {
+	view {
+		# cat=plugin.tx_d3evgtools/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:d3_evgtools/Resources/Private/Templates/
+		# cat=plugin.tx_d3evgtools/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:d3_evgtools/Resources/Private/Partials/
+		# cat=plugin.tx_d3evgtools/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:d3_evgtools/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_d3evgtools//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

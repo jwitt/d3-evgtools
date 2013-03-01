@@ -1,0 +1,55 @@
+{namespace d3=Tx_D3Evgtools_ViewHelpers}
+		<f:debug title="pcat">{objIterator}</f:debug>
+
+
+<f:layout name="Default" />
+
+
+<f:section name="main">
+	<div class="bookSliderWrapper">
+	<div id="bookSlider">
+	<div class="bookSliderGroup">	
+	<f:for each="{contents}" as="content" iteration="objIterator" >
+		<div class="bookSliderElement">
+        <f:if condition="<d3:testLink  link='{content.link}' />">
+			<f:then>
+				<f:link.external uri="{content.link}" target="_blank">
+					<f:cObject typoscriptObjectPath="plugin.tx_d3evgtools.settings.bookSlider.image" data='{content}' />
+				</f:link.external>				
+			</f:then>
+			<f:else>
+				<f:link.page pageUid="{content.link}">
+					<f:cObject typoscriptObjectPath="plugin.tx_d3evgtools.settings.bookSlider.image" data='{content}' />
+				</f:link.page>
+			</f:else>	
+		</f:if>	
+		</div>		
+		<f:if condition="{objIterator.cycle} % 9 "> 
+			<f:then></f:then><f:else></div><div class="bookSliderGroup"></f:else>
+		</f:if>
+		<f:if condition="{objIterator.cycle} % 9 "> 
+			<f:then></f:then><f:else></f:else>
+		</f:if>	
+	</f:for>
+	<f:for each="{contents}" as="content" iteration="objIterator2" >
+        <f:if condition="<d3:fillSlider  count='{objIterator2.cycle}' total='{objIterator2.total}' modulo='9' />  == 1" >
+			<div class="bookSliderElement">
+			<f:if condition="<d3:testLink  link='{content.link}' />">
+				<f:then>
+					<f:link.external uri="{content.link}" target="_blank">
+						<f:cObject typoscriptObjectPath="plugin.tx_d3evgtools.settings.bookSlider.image" data='{content}' />
+					</f:link.external>				
+				</f:then>
+				<f:else>
+					<f:link.page pageUid="{content.link}">
+						<f:cObject typoscriptObjectPath="plugin.tx_d3evgtools.settings.bookSlider.image" data='{content}' />
+					</f:link.page>
+				</f:else>	
+			</f:if>	
+			</div>		
+		</f:if>
+	</f:for>
+	</div>	
+	</div>	
+	</div>
+</f:section>

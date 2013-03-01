@@ -1,0 +1,224 @@
+
+
+plugin.tx_d3evgtools {
+	view {
+		templateRootPath = {$plugin.tx_d3evgtools.view.templateRootPath}
+		partialRootPath = {$plugin.tx_d3evgtools.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_d3evgtools.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_d3evgtools.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+}
+
+plugin.tx_d3evgtools.settings {
+	contentObject = COA
+	contentObject {
+		10 = LOAD_REGISTER
+		10 {
+		  mypid.field = pid
+		}
+		20 = LOAD_REGISTER
+		20 {
+		  myuid.field = uid
+		}
+		30 = CONTENT
+		30 {
+		  table = tt_content
+		  select.pidInList.dataWrap = {register:mypid}
+		  select.where = 1=1
+		  select.andWhere.dataWrap = uid= {register:myuid}
+		  //select.orderBy = sorting
+		}
+	}	
+	pageContentObject {
+		10 = LOAD_REGISTER
+		10 {
+		  mypid.field = page
+		}
+		20 = LOAD_REGISTER
+		20 {
+		  mycolpos.field = colpos
+		}
+		30 = CONTENT
+		30 {
+		  table = tt_content
+		  select.pidInList.dataWrap = {register:mypid}
+		  select.where = 1=1
+		  #select.andWhere.dataWrap = colpos= {register:mycolpos}
+		  select.orderBy = sorting
+		}
+	}	
+	bookSlider.image = IMAGE
+	bookSlider.image{
+		file{
+				width	= 79c
+				height  = 127c
+		}	
+		file.import =  uploads/tx_d3evgtools/
+		file.import.field = image
+		file.import.listNum = 0
+	}
+	
+	link{
+		10 = TEXT
+		10{
+			value = francais
+			stdWrap.typolink {
+				#parameter.dataWrap = http://www.birkenmeier.com
+				#145 
+				parameter.data = TSFE : id
+				additionalParams = &L=1
+				addQueryString = 0
+				target=_self
+			}
+			wrap=<li>|</li>	
+		}		
+
+		5 = IMAGE
+		5{
+			file = &&&/birksseier02.png
+			stdWrap{
+				typolink {
+					//parameter.dataWrap = http://www.birkenmeier.de/home.html
+					parameter = 1 
+					additionalParams = &L=0
+					addQueryString = 0
+					target=_self
+				}
+			}	
+			stdWrap.wrap=<li class="logo">|</li>	
+		}	
+	}
+
+
+
+}
+
+
+tt_content.Tx_D3Evgtools_CntBookSlider >
+tt_content.Tx_D3Evgtools_CntBookSlider = USER
+tt_content.Tx_D3Evgtools_CntBookSlider {
+	userFunc = tx_extbase_core_bootstrap->run
+	pluginName = Pi1
+	extensionName = D3Evgtools
+	controller = BookSlider
+	action = get
+	switchableControllerActions {
+		BookSlider {
+			1 = showBookSlider
+		}
+	}
+	settings =< plugin.tx_d3evgtools.settings
+	persistence =< plugin.tx_d3evgtools.persistence
+	view =< plugin.tx_d3evgtools.view
+}
+
+tt_content.Tx_D3Evgtools_CntCntSlider >
+tt_content.Tx_D3Evgtools_CntCntSlider = USER
+tt_content.Tx_D3Evgtools_CntCntSlider {
+	userFunc = tx_extbase_core_bootstrap->run
+	pluginName = Pi1
+	extensionName = D3Evgtools
+	controller = ContentSlider
+	action = get
+	switchableControllerActions {
+		ContentSlider {
+			1 = showContentSlider
+		}
+	}
+	settings =< plugin.tx_d3evgtools.settings
+	persistence =< plugin.tx_d3evgtools.persistence
+	view =< plugin.tx_d3evgtools.view
+}
+
+tt_content.Tx_D3Evgtools_CntRandom >
+tt_content.Tx_D3Evgtools_CntRandom = USER
+tt_content.Tx_D3Evgtools_CntRandom {
+	userFunc = tx_extbase_core_bootstrap->run
+	pluginName = Pi1
+	extensionName = D3Evgtools
+	controller = RandomContent
+	action = get
+	switchableControllerActions {
+		RandomContent {
+			1 = showRandomContent
+		}
+	}
+	settings =< plugin.tx_d3evgtools.settings
+	persistence =< plugin.tx_d3evgtools.persistence
+	view =< plugin.tx_d3evgtools.view
+}
+
+tt_content.Tx_D3Evgtools_CntAccordion >
+tt_content.Tx_D3Evgtools_CntAccordion = USER
+tt_content.Tx_D3Evgtools_CntAccordion {
+	userFunc = tx_extbase_core_bootstrap->run
+	pluginName = Pi1
+	extensionName = D3Evgtools
+	controller = AccordionContent
+	action = get
+	switchableControllerActions {
+		AccordionContent {
+			1 = showAccordion
+		}
+	}
+	settings =< plugin.tx_d3evgtools.settings
+	persistence =< plugin.tx_d3evgtools.persistence
+	view =< plugin.tx_d3evgtools.view
+}
+
+
+plugin.tx_d3evgtools.persistence.classes{
+		Tx_D3Evgtools_Domain_Model_Content.mapping {
+			mapping {
+				tableName = tt_content
+				columns {
+						uid.mapOnProperty = uid
+						pid.mapOnProperty = pid
+                        colPos.mapOnProperty = colpos
+				}
+			}
+		}
+
+
+		Tx_D3Evgtools_Domain_Model_BookSlider.mapping {
+			tableName = tx_d3evgtools_domain_model_bookslider
+			columns {
+				 sorting.mapOnProperty = sorting
+				 cntbookslider.mapOnProperty = contentUid
+			}
+		}	   
+		Tx_D3Evgtools_Domain_Model_AccordionContent.mapping {
+			tableName = tx_d3evgtools_domain_model_accordioncontent
+			columns {
+				 sorting.mapOnProperty = sorting
+				 cntaccordion.mapOnProperty = contentUid
+			}
+		}	   
+		Tx_D3Evgtools_Domain_Model_ContentSlider.mapping {
+			tableName = tx_d3evgtools_domain_model_contentslider
+			columns {
+				 sorting.mapOnProperty = sorting
+				 cntcntslider.mapOnProperty = contentUid
+			}
+		}	   
+		Tx_D3Evgtools_Domain_Model_RandomContent.mapping {
+			tableName = tx_d3evgtools_domain_model_randomcontent
+			columns {
+				 sorting.mapOnProperty = sorting
+				 cntrandom.mapOnProperty = contentUid
+			}
+		}	   
+		Tx_D3Evgtools_Domain_Model_RandomPage.mapping {
+			tableName = tx_d3evgtools_domain_model_randompage
+			columns {
+				 sorting.mapOnProperty = sorting
+				 cntrandom.mapOnProperty = contentUid
+			}
+		}	   
+}

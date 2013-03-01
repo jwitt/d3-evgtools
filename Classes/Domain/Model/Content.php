@@ -1,0 +1,63 @@
+<?php
+
+/***************************************************************
+ *  Copyright notice
+ *
+ *  (c) 2011 Jens Witt <jwitt@freicom.de>, FreiCom
+ *  
+ *  All rights reserved
+ *
+ *  This script is part of the TYPO3 project. The TYPO3 project is
+ *  free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  The GNU General Public License can be found at
+ *  http://www.gnu.org/copyleft/gpl.html.
+ *
+ *  This script is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  This copyright notice MUST APPEAR in all copies of the script!
+ ***************************************************************/
+
+/**
+ *
+ *
+ * @package fc_biproducts
+ * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
+ *
+ */
+class Tx_D3Evgtools_Domain_Model_Content extends Tx_Extbase_DomainObject_AbstractEntity {
+
+	/**
+	 * Colpos
+	 *
+	 * @var int
+	 */
+	protected $colpos;
+
+	/**
+	 * Setter for colpos
+	 *
+	 * @param int $colpos
+	 * @return
+	 */
+	public function setColpos($colpos) {
+		$this->colPos = $colPos;
+	}
+
+	/**
+	 * Getter for colpos
+	 *
+	 * @return int colpos
+	 */
+	public function getColpos() {
+		return $this->colpos;
+	}
+
+}
+?>

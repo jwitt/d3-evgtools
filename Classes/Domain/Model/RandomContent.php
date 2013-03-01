@@ -1,0 +1,141 @@
+<?php
+
+/***************************************************************
+ *  Copyright notice
+ *
+ *  (c) 2013 Jens Witt <jens.witt@digitalhoch3.de>
+ *  
+ *  All rights reserved
+ *
+ *  This script is part of the TYPO3 project. The TYPO3 project is
+ *  free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  The GNU General Public License can be found at
+ *  http://www.gnu.org/copyleft/gpl.html.
+ *
+ *  This script is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  This copyright notice MUST APPEAR in all copies of the script!
+ ***************************************************************/
+
+/**
+ *
+ *
+ * @package d3_evgtools
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
+ *
+ */
+class Tx_D3Evgtools_Domain_Model_RandomContent extends Tx_D3Evgtools_Domain_Model_Abstract {
+
+	/**
+	 * Name
+	 *
+	 * @var string
+	 */
+	protected $name;
+
+	/**
+	 * Inhalt
+	 *
+	 * @var string
+	 */
+	protected $content;
+
+	/**
+	 * Spalte
+	 *
+	 * @var integer
+	 */
+	protected $colpos;
+
+	/**
+	 * Seite
+	 *
+	 * @var string
+	 */
+	protected $page;
+
+	/**
+	 * Returns the name
+	 *
+	 * @return string $name
+	 */
+	public function getName() {
+		return $this->name;
+	}
+
+	/**
+	 * Sets the name
+	 *
+	 * @param string $name
+	 * @return void
+	 */
+	public function setName($name) {
+		$this->name = $name;
+	}
+
+	/**
+	 * Returns the content
+	 *
+	 * @return string $content
+	 */
+	public function getContent() {
+		return $this->content;
+	}
+
+	/**
+	 * Sets the content
+	 *
+	 * @param string $content
+	 * @return void
+	 */
+	public function setContent($content) {
+		$this->content = $content;
+	}
+
+	/**
+	 * Returns the colpos
+	 *
+	 * @return integer $colpos
+	 */
+	public function getColpos() {
+		return $this->colpos;
+	}
+
+	/**
+	 * Sets the colpos
+	 *
+	 * @param integer $colpos
+	 * @return void
+	 */
+	public function setColpos($colpos) {
+		$this->colpos = $colpos;
+	}
+
+	/**
+	 * Returns the page
+	 *
+	 * @return string $page
+	 */
+	public function getPage() {
+		return $this->page;
+	}
+
+	/**
+	 * Sets the page
+	 *
+	 * @param string $page
+	 * @return void
+	 */
+	public function setPage($page) {
+		$this->page = $page;
+	}
+
+}
+?>
