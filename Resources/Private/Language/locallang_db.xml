@@ -59,6 +59,7 @@
 			
 			<label index="tx_d3evgtools_domain_model_contentcontent">Content Content</label>
 			<label index="tx_d3evgtools_domain_model_contentcontent.page">Page</label>
+			<label index="tx_d3evgtools_domain_model_contentcontent.col_pos">Col Pos</label>
 
 		</languageKey>
 	</data>

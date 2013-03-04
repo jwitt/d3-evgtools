@@ -6,10 +6,10 @@ if (!defined ('TYPO3_MODE')) {
 $TCA['tx_d3evgtools_domain_model_contentcontent'] = array(
 	'ctrl' => $TCA['tx_d3evgtools_domain_model_contentcontent']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, page',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, page, col_pos',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, page,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, page, col_pos,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -101,6 +101,20 @@ $TCA['tx_d3evgtools_domain_model_contentcontent'] = array(
 				'cols' => 40,
 				'rows' => 15,
 				'eval' => 'trim'
+			),
+		),
+		'col_pos' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_contentcontent.col_pos',
+			'config' => array(
+				'type' => 'input',
+				'size' => 4,
+				'eval' => 'int'
+			),
+		),
+		'cntcontent' => array(
+			'config' => array(
+				'type' => 'passthrough',
 			),
 		),
 	),

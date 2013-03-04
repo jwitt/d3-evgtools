@@ -9,6 +9,7 @@
 	<languageKey index="default" type="array">
 	   
 			<label index="page.description">page</label>
+			<label index="col_pos.description">colPos</label>
 		</languageKey>
 	</data>
 </T3locallang>

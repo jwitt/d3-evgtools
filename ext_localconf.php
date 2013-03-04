@@ -13,7 +13,7 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 		'RandomPage' => 'showRandomPage',
 		'Content' => '',
 		'AccordionContent' => 'showAccordion',
-		'ContentContent' => 'showcontent',
+		'ContentContent' => 'showContent',
 		
 	),
 	// non-cacheable actions

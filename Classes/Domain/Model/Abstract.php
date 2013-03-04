@@ -69,10 +69,10 @@ class Tx_D3Evgtools_Domain_Model_Abstract extends Tx_Extbase_DomainObject_Abstra
 	/**
 	 * Returns the 
 	 *
-	 * @return int $sliderContentUid
+	 * @return int $contentUid
 	 */
 	public function getContentUid() {
-		return $this->ContentUid;
+		return $this->contentUid;
 	}
 
 	
@@ -86,6 +86,5 @@ class Tx_D3Evgtools_Domain_Model_Abstract extends Tx_Extbase_DomainObject_Abstra
 		$this->contentUid = $contentUid;
 	}
 	
-
 }
 ?>

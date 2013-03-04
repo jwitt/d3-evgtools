@@ -53,12 +53,60 @@ class Tx_D3Evgtools_Domain_Model_CntContentTest extends Tx_Extbase_Tests_Unit_Ba
 	/**
 	 * @test
 	 */
-	public function getContentContentReturnsInitialValueForTx_D3Evgtools_Domain_Model_ContentContent() { }
+	public function getContentContentReturnsInitialValueForObjectStorageContainingTx_D3Evgtools_Domain_Model_ContentContent() { 
+		$newObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
+		$this->assertEquals(
+			$newObjectStorage,
+			$this->fixture->getContentContent()
+		);
+	}
 
 	/**
 	 * @test
 	 */
-	public function setContentContentForTx_D3Evgtools_Domain_Model_ContentContentSetsContentContent() { }
+	public function setContentContentForObjectStorageContainingTx_D3Evgtools_Domain_Model_ContentContentSetsContentContent() { 
+		$contentContent = new Tx_D3Evgtools_Domain_Model_ContentContent();
+		$objectStorageHoldingExactlyOneContentContent = new Tx_Extbase_Persistence_ObjectStorage();
+		$objectStorageHoldingExactlyOneContentContent->attach($contentContent);
+		$this->fixture->setContentContent($objectStorageHoldingExactlyOneContentContent);
+
+		$this->assertSame(
+			$objectStorageHoldingExactlyOneContentContent,
+			$this->fixture->getContentContent()
+		);
+	}
+	
+	/**
+	 * @test
+	 */
+	public function addContentContentToObjectStorageHoldingContentContent() {
+		$contentContent = new Tx_D3Evgtools_Domain_Model_ContentContent();
+		$objectStorageHoldingExactlyOneContentContent = new Tx_Extbase_Persistence_ObjectStorage();
+		$objectStorageHoldingExactlyOneContentContent->attach($contentContent);
+		$this->fixture->addContentContent($contentContent);
+
+		$this->assertEquals(
+			$objectStorageHoldingExactlyOneContentContent,
+			$this->fixture->getContentContent()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function removeContentContentFromObjectStorageHoldingContentContent() {
+		$contentContent = new Tx_D3Evgtools_Domain_Model_ContentContent();
+		$localObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
+		$localObjectStorage->attach($contentContent);
+		$localObjectStorage->detach($contentContent);
+		$this->fixture->addContentContent($contentContent);
+		$this->fixture->removeContentContent($contentContent);
+
+		$this->assertEquals(
+			$localObjectStorage,
+			$this->fixture->getContentContent()
+		);
+	}
 	
 }
 ?>

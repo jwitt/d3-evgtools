@@ -51,12 +51,33 @@ class Tx_D3Evgtools_Controller_ContentContentController extends Tx_Extbase_MVC_C
 	}
 
 	/**
-	 * action showcontent
+	 * action showContent
 	 *
 	 * @return void
 	 */
-	public function showcontentAction() {
+	public function showContentAction() {
+		//xdebug_break();
+		$cObjData = $this->configurationManager->getContentObject();
+		$contents =  $this->contentContentRepository->findByContentUid((int)$cObjData->data['uid']);
 
+		$contentRepository = $this->objectManager->get('Tx_D3Evgtools_Domain_Repository_ContentRepository');
+		foreach($contents as $content){
+			$pid = $content->getPage();
+			if($pid){
+				$GLOBALS['TSFE']->fe_user->setKey('ses','page',$pid);
+				$GLOBALS["TSFE"]->storeSessionData();
+			}else{
+				$pid = $GLOBALS['TSFE']->fe_user->getKey('ses','page');
+			}
+			if(!$pid){
+				$pid = $this->settings['defaultHomePagePid'];
+			}	
+			$pageContents = $contentRepository->findByPidAndColpos($pid,0);//$content->getColpos());
+			foreach($pageContents as $c){
+			   $contentArray[] = $c;
+			}	
+		}
+		$this->view->assign('contents', $contentArray);
 	}
 
 }

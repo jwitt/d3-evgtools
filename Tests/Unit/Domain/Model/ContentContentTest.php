@@ -67,5 +67,27 @@ class Tx_D3Evgtools_Domain_Model_ContentContentTest extends Tx_Extbase_Tests_Uni
 		);
 	}
 	
+	/**
+	 * @test
+	 */
+	public function getColPosReturnsInitialValueForInteger() { 
+		$this->assertSame(
+			0,
+			$this->fixture->getColPos()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setColPosForIntegerSetsColPos() { 
+		$this->fixture->setColPos(12);
+
+		$this->assertSame(
+			12,
+			$this->fixture->getColPos()
+		);
+	}
+	
 }
 ?>

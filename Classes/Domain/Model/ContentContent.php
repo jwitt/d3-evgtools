@@ -34,11 +34,25 @@
 class Tx_D3Evgtools_Domain_Model_ContentContent extends Tx_D3Evgtools_Domain_Model_Abstract {
 
 	/**
+	 * pageUid
+	 *
+	 * @var int
+	 */
+	protected $pageUid;
+
+	/**
 	 * page
 	 *
 	 * @var string
 	 */
 	protected $page;
+
+	/**
+	 * colPos
+	 *
+	 * @var integer
+	 */
+	protected $colPos;
 
 	/**
 	 * Returns the page
@@ -57,6 +71,44 @@ class Tx_D3Evgtools_Domain_Model_ContentContent extends Tx_D3Evgtools_Domain_Mod
 	 */
 	public function setPage($page) {
 		$this->page = $page;
+	}
+
+	/**
+	 * Returns the
+	 *
+	 * @return int $pageUid
+	 */
+	public function getPageUid() {
+		return $this->pageUid;
+	}
+
+	/**
+	 * Sets the PageUid
+	 *
+	 * @param int $pageUid
+	 * @return void
+	 */
+	public function setPageUid($pageUid) {
+		$this->pageUid = $pageUid;
+	}
+
+	/**
+	 * Returns the colPos
+	 *
+	 * @return integer $colPos
+	 */
+	public function getColPos() {
+		return $this->colPos;
+	}
+
+	/**
+	 * Sets the colPos
+	 *
+	 * @param integer $colPos
+	 * @return void
+	 */
+	public function setColPos($colPos) {
+		$this->colPos = $colPos;
 	}
 
 }

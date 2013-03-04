@@ -16,6 +16,8 @@ plugin.tx_d3evgtools {
 }
 
 plugin.tx_d3evgtools.settings {
+	defaultHomePagePid = 1
+
 	contentObject = COA
 	contentObject {
 		10 = LOAD_REGISTER
@@ -215,7 +217,7 @@ plugin.tx_d3evgtools.persistence.classes{
 			tableName = tx_d3evgtools_domain_model_contentcontent
 			columns {
 				 sorting.mapOnProperty = sorting
-				 //cntaccordion.mapOnProperty = contentUid
+				 cntcontent.mapOnProperty = contentUid
 			}
 		}	   
 		Tx_D3Evgtools_Domain_Model_AccordionContent.mapping {

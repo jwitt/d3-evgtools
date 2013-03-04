@@ -41,6 +41,7 @@
 			<label index="tx_d3evgtools_domain_model_cntcontent.content_content">contentContent</label>
 			<label index="tx_d3evgtools_domain_model_contentcontent">ContentContent</label>
 			<label index="tx_d3evgtools_domain_model_contentcontent.page">page</label>
+			<label index="tx_d3evgtools_domain_model_contentcontent.col_pos">colPos</label>
 			<label index="tx_d3evgtools_domain_model_contentbookslider">ContentBookSlider</label>
 			<label index="tx_d3evgtools_domain_model_contentbookslider.book_sliders">bookSliders</label>
 			<label index="tx_d3evgtools_domain_model_contentcontslider">ContentContSlider</label>

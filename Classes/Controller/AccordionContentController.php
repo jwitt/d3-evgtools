@@ -56,7 +56,7 @@ class Tx_D3Evgtools_Controller_AccordionContentController extends Tx_Extbase_MVC
 	 * @return void
 	 */
 	public function showAccordionAction() {
-		xdebug_break();
+		//xdebug_break();
 		$cObjData = $this->configurationManager->getContentObject();
 		$contents =  $this->accordionContentRepository->findByContentUid((int)$cObjData->data['uid']);
 		$contentRepository = $this->objectManager->get('Tx_D3Evgtools_Domain_Repository_ContentRepository');

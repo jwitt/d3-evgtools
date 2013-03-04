@@ -273,7 +273,7 @@ CREATE TABLE tx_d3evgtools_domain_model_accordioncontent (
 #
 CREATE TABLE tt_content (
 
-	content_content int(11) unsigned DEFAULT '0',
+	content_content int(11) unsigned DEFAULT '0' NOT NULL,
 
 );
 
@@ -285,7 +285,10 @@ CREATE TABLE tx_d3evgtools_domain_model_contentcontent (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
+	cntcontent int(11) unsigned DEFAULT '0' NOT NULL,
+
 	page text NOT NULL,
+	col_pos int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -360,6 +363,15 @@ CREATE TABLE tx_d3evgtools_domain_model_randompage (
 CREATE TABLE tx_d3evgtools_domain_model_accordioncontent (
 
 	cntaccordion  int(11) unsigned DEFAULT '0' NOT NULL,
+
+);
+
+#
+# Table structure for table 'tx_d3evgtools_domain_model_contentcontent'
+#
+CREATE TABLE tx_d3evgtools_domain_model_contentcontent (
+
+	cntcontent  int(11) unsigned DEFAULT '0' NOT NULL,
 
 );
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
