@@ -36,14 +36,14 @@ class Tx_D3Evgtools_Domain_Model_CntContent extends Tx_Extbase_DomainObject_Abst
 	/**
 	 * contentContent
 	 *
-	 * @var
+	 * @var Tx_D3Evgtools_Domain_Model_ContentContent
 	 */
 	protected $contentContent;
 
 	/**
 	 * Returns the contentContent
 	 *
-	 * @return  $contentContent
+	 * @return Tx_D3Evgtools_Domain_Model_ContentContent contentContent
 	 */
 	public function getContentContent() {
 		return $this->contentContent;
@@ -52,8 +52,8 @@ class Tx_D3Evgtools_Domain_Model_CntContent extends Tx_Extbase_DomainObject_Abst
 	/**
 	 * Sets the contentContent
 	 *
-	 * @param  $contentContent
-	 * @return void
+	 * @param Tx_D3Evgtools_Domain_Model_ContentContent $contentContent
+	 * @return Tx_D3Evgtools_Domain_Model_ContentContent contentContent
 	 */
 	public function setContentContent($contentContent) {
 		$this->contentContent = $contentContent;

@@ -107,7 +107,7 @@ $TCA['tx_d3evgtools_domain_model_contentcontent'] = array(
 );
 
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
-$TCA['tx_d3evgtools_domain_model__contentcontent']['columns']['page']['config'] = array(
+$TCA['tx_d3evgtools_domain_model_contentcontent']['columns']['page']['config'] = array(
 			'type' => 'group',
 			'internal_type' => 'db',
 			'allowed' => 'pages',
@@ -121,6 +121,4 @@ $TCA['tx_d3evgtools_domain_model__contentcontent']['columns']['page']['config'] 
 				),
 			),
 	);
-
-
 ?>

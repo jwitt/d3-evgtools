@@ -53,12 +53,12 @@ class Tx_D3Evgtools_Domain_Model_CntContentTest extends Tx_Extbase_Tests_Unit_Ba
 	/**
 	 * @test
 	 */
-	public function getContentContentReturnsInitialValueFor() { }
+	public function getContentContentReturnsInitialValueForTx_D3Evgtools_Domain_Model_ContentContent() { }
 
 	/**
 	 * @test
 	 */
-	public function setContentContentForSetsContentContent() { }
+	public function setContentContentForTx_D3Evgtools_Domain_Model_ContentContentSetsContentContent() { }
 	
 }
 ?>

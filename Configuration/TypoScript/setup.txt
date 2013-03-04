@@ -215,7 +215,7 @@ plugin.tx_d3evgtools.persistence.classes{
 			tableName = tx_d3evgtools_domain_model_contentcontent
 			columns {
 				 sorting.mapOnProperty = sorting
-				 cntaccordion.mapOnProperty = contentUid
+				 //cntaccordion.mapOnProperty = contentUid
 			}
 		}	   
 		Tx_D3Evgtools_Domain_Model_AccordionContent.mapping {
