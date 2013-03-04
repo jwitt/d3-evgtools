@@ -49,7 +49,7 @@ $tmp_d3_evgtools_columns = array(
 			'type' => 'inline',
 			'foreign_table' => 'tx_d3evgtools_domain_model_bookslider',
 			'foreign_field' => 'cntbookslider',
-			'maxitems'      => 999,
+			'maxitems'      => 9999,
 			'appearance' => array(
 				'collapseAll' => 0,
 				'levelLinksPosition' => 'top',
@@ -78,7 +78,7 @@ $tmp_d3_evgtools_columns = array(
 			'type' => 'inline',
 			'foreign_table' => 'tx_d3evgtools_domain_model_contentslider',
 			'foreign_field' => 'cntcntslider',
-			'maxitems'      => 999,
+			'maxitems'      => 9999,
 			'appearance' => array(
 				'collapseAll' => 0,
 				'levelLinksPosition' => 'top',
@@ -162,7 +162,7 @@ $tmp_d3_evgtools_columns = array(
 			'type' => 'inline',
 			'foreign_table' => 'tx_d3evgtools_domain_model_randompage',
 			'foreign_field' => 'cntrandom',
-			'maxitems'      => 1,
+			'maxitems'      => 9999,
 			'appearance' => array(
 				'collapseAll' => 0,
 				'levelLinksPosition' => 'top',
@@ -271,7 +271,7 @@ $tmp_d3_evgtools_columns = array(
 			'type' => 'inline',
 			'foreign_table' => 'tx_d3evgtools_domain_model_accordioncontent',
 			'foreign_field' => 'cntaccordion',
-			'maxitems'      => 1,
+			'maxitems'      => 9999,
 			'appearance' => array(
 				'collapseAll' => 0,
 				'levelLinksPosition' => 'top',
@@ -329,7 +329,7 @@ $tmp_d3_evgtools_columns = array(
 			'type' => 'inline',
 			'foreign_table' => 'tx_d3evgtools_domain_model_contentcontent',
 			'foreign_field' => 'cntcontent',
-			'maxitems'      => 1,
+			'maxitems'      => 9999,
 			'appearance' => array(
 				'collapseAll' => 0,
 				'levelLinksPosition' => 'top',
@@ -375,6 +375,64 @@ $TCA['tx_d3evgtools_domain_model_contentcontent'] = array(
 		'searchFields' => 'page,col_pos,',
 		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/ContentContent.php',
 		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_d3evgtools_domain_model_contentcontent.gif'
+	),
+);
+
+$tmp_d3_evgtools_columns = array(
+
+	'magazine_sliders' => array(
+		'exclude' => 0,
+		'label' => 'LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntmagazineslider.magazine_sliders',
+		'config' => array(
+			'type' => 'inline',
+			'foreign_table' => 'tx_d3evgtools_domain_model_magazineslider',
+			'foreign_field' => 'cntmagazineslider',
+			'maxitems'      => 9999,
+			'appearance' => array(
+				'collapseAll' => 0,
+				'levelLinksPosition' => 'top',
+				'showSynchronizationLink' => 1,
+				'showPossibleLocalizationRecords' => 1,
+				'showAllLocalizationLink' => 1
+			),
+		),
+	),
+);
+
+t3lib_extMgm::addTCAcolumns('tt_content',$tmp_d3_evgtools_columns);
+
+$TCA['tt_content']['columns'][$TCA['tt_content']['ctrl']['type']]['config']['items'][] = array('LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tt_content.tx_extbase_type.Tx_D3Evgtools_CntMagazineSlider','Tx_D3Evgtools_CntMagazineSlider');
+
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazineSlider']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazineSlider']['showitem'] .= ',--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntmagazineslider,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazineSlider']['showitem'] .= 'magazine_sliders';
+
+t3lib_extMgm::addLLrefForTCAdescr('tx_d3evgtools_domain_model_magazineslider', 'EXT:d3_evgtools/Resources/Private/Language/locallang_csh_tx_d3evgtools_domain_model_magazineslider.xml');
+t3lib_extMgm::allowTableOnStandardPages('tx_d3evgtools_domain_model_magazineslider');
+$TCA['tx_d3evgtools_domain_model_magazineslider'] = array(
+	'ctrl' => array(
+		'title'	=> 'LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_magazineslider',
+		'label' => 'title',
+		'tstamp' => 'tstamp',
+		'crdate' => 'crdate',
+		'cruser_id' => 'cruser_id',
+		'dividers2tabs' => TRUE,
+		'sortby' => 'sorting',
+		'versioningWS' => 2,
+		'versioning_followPages' => TRUE,
+		'origUid' => 't3_origuid',
+		'languageField' => 'sys_language_uid',
+		'transOrigPointerField' => 'l10n_parent',
+		'transOrigDiffSourceField' => 'l10n_diffsource',
+		'delete' => 'deleted',
+		'enablecolumns' => array(
+			'disabled' => 'hidden',
+			'starttime' => 'starttime',
+			'endtime' => 'endtime',
+		),
+		'searchFields' => 'title,link,images,text,',
+		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/MagazineSlider.php',
+		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_d3evgtools_domain_model_magazineslider.gif'
 	),
 );
 

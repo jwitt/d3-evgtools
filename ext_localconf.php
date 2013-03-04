@@ -14,6 +14,7 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 		'Content' => '',
 		'AccordionContent' => 'showAccordion',
 		'ContentContent' => 'showContent',
+		'MagazineSlider' => 'showMagazineSlider',
 		
 	),
 	// non-cacheable actions
@@ -25,6 +26,7 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 		'Content' => '',
 		'AccordionContent' => '',
 		'ContentContent' => '',
+		'MagazineSlider' => '',
 		
 	)
 );

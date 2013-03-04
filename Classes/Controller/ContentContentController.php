@@ -83,7 +83,6 @@ class Tx_D3Evgtools_Controller_ContentContentController extends Tx_Extbase_MVC_C
 		$this->view->assign('contents', $contentArray);
 		$th = substr($this->view->render(),strlen('<div class="tx-d3-evgtools">'));
 		return substr($th,0,strlen($th)-strlen('</div>'));
-		
 	}
 
 }

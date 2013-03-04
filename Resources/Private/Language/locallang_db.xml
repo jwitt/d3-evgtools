@@ -61,6 +61,16 @@
 			<label index="tx_d3evgtools_domain_model_contentcontent.page">Page</label>
 			<label index="tx_d3evgtools_domain_model_contentcontent.col_pos">Col Pos</label>
 
+			<label index="tx_d3evgtools_domain_model_cntmagazineslider">Cnt Magazine Slider</label>
+			<label index="tx_d3evgtools_domain_model_cntmagazineslider.magazine_sliders">Magazine Sliders</label>
+			<label index="tt_content.tx_extbase_type.Tx_D3Evgtools_CntMagazineSlider">EVG Tools CntMagazineSlider</label>
+			
+			<label index="tx_d3evgtools_domain_model_magazineslider">Magazine Slider</label>
+			<label index="tx_d3evgtools_domain_model_magazineslider.title">Title</label>
+			<label index="tx_d3evgtools_domain_model_magazineslider.link">Link</label>
+			<label index="tx_d3evgtools_domain_model_magazineslider.images">Images</label>
+			<label index="tx_d3evgtools_domain_model_magazineslider.text">Text</label>
+
 		</languageKey>
 	</data>
 </T3locallang>

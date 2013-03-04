@@ -138,6 +138,24 @@ tt_content.Tx_D3Evgtools_CntCntSlider {
 	view =< plugin.tx_d3evgtools.view
 }
 
+tt_content.Tx_D3Evgtools_MagazineSlider >
+tt_content.Tx_D3Evgtools_MagazineSlider = USER
+tt_content.Tx_D3Evgtools_MagazineSlider {
+	userFunc = tx_extbase_core_bootstrap->run
+	pluginName = Pi1
+	extensionName = D3Evgtools
+	controller = MagazineSlider
+	action = get
+	switchableControllerActions {
+		MagazineSlider {
+			1 = showMagazineSlider
+		}
+	}
+	settings =< plugin.tx_d3evgtools.settings
+	persistence =< plugin.tx_d3evgtools.persistence
+	view =< plugin.tx_d3evgtools.view
+}
+
 tt_content.Tx_D3Evgtools_CntContent >
 tt_content.Tx_D3Evgtools_CntContent = USER
 tt_content.Tx_D3Evgtools_CntContent {
@@ -232,6 +250,13 @@ plugin.tx_d3evgtools.persistence.classes{
 			columns {
 				 sorting.mapOnProperty = sorting
 				 cntcntslider.mapOnProperty = contentUid
+			}
+		}	   
+		Tx_D3Evgtools_Domain_Model_MagazineSlider.mapping {
+			tableName = tx_d3evgtools_domain_model_magazineslider
+			columns {
+				 sorting.mapOnProperty = sorting
+				 cntmagazineslider.mapOnProperty = contentUid
 			}
 		}	   
 		Tx_D3Evgtools_Domain_Model_RandomContent.mapping {

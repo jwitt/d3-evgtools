@@ -83,45 +83,6 @@ class Tx_D3Evgtools_Domain_Model_CntRandom extends Tx_Extbase_DomainObject_Abstr
 	}
 
 	/**
-	 * Adds a RandomContent
-	 *
-	 * @param Tx_D3Evgtools_Domain_Model_RandomContent $randomContent
-	 * @return void
-	 */
-	public function addRandomContent(Tx_D3Evgtools_Domain_Model_RandomContent $randomContent) {
-		$this->randomContents->attach($randomContent);
-	}
-
-	/**
-	 * Removes a RandomContent
-	 *
-	 * @param Tx_D3Evgtools_Domain_Model_RandomContent $randomContentToRemove The RandomContent to be removed
-	 * @return void
-	 */
-	public function removeRandomContent(Tx_D3Evgtools_Domain_Model_RandomContent $randomContentToRemove) {
-		$this->randomContents->detach($randomContentToRemove);
-	}
-
-	/**
-	 * Returns the randomContents
-	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_D3Evgtools_Domain_Model_RandomContent> $randomContents
-	 */
-	public function getRandomContents() {
-		return $this->randomContents;
-	}
-
-	/**
-	 * Sets the randomContents
-	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_D3Evgtools_Domain_Model_RandomContent> $randomContents
-	 * @return void
-	 */
-	public function setRandomContents(Tx_Extbase_Persistence_ObjectStorage $randomContents) {
-		$this->randomContents = $randomContents;
-	}
-
-	/**
 	 * Returns the count
 	 *
 	 * @return string $count
@@ -177,6 +138,45 @@ class Tx_D3Evgtools_Domain_Model_CntRandom extends Tx_Extbase_DomainObject_Abstr
 	 */
 	public function setRandomPages(Tx_Extbase_Persistence_ObjectStorage $randomPages) {
 		$this->randomPages = $randomPages;
+	}
+
+	/**
+	 * Adds a RandomContent
+	 *
+	 * @param Tx_D3Evgtools_Domain_Model_RandomContent $randomContent
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_D3Evgtools_Domain_Model_RandomContent> randomContents
+	 */
+	public function addRandomContent($randomContent) {
+		$this->randomContents->attach($randomContent);
+	}
+
+	/**
+	 * Removes a RandomContent
+	 *
+	 * @param Tx_D3Evgtools_Domain_Model_RandomContent $randomContentToRemove The RandomContent to be removed
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_D3Evgtools_Domain_Model_RandomContent> randomContents
+	 */
+	public function removeRandomContent($randomContentToRemove) {
+		$this->randomContents->detach($randomContentToRemove);
+	}
+
+	/**
+	 * Returns the randomContents
+	 *
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_D3Evgtools_Domain_Model_RandomContent> randomContents
+	 */
+	public function getRandomContents() {
+		return $this->randomContents;
+	}
+
+	/**
+	 * Sets the randomContents
+	 *
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_D3Evgtools_Domain_Model_RandomContent> $randomContents
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_D3Evgtools_Domain_Model_RandomContent> randomContents
+	 */
+	public function setRandomContents(Tx_Extbase_Persistence_ObjectStorage $randomContents) {
+		$this->randomContents = $randomContents;
 	}
 
 }
