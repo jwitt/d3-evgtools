@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <T3locallang>
 	<meta type="array">
-		<description>Context Sensitive Help (CSH) for table tt_content</description>
+		<description>Context Sensitive Help (CSH) for table tx_d3evgtools_domain_model_contentcontent</description>
 		<type>CSH</type>
-		<csh_table>tt_content</csh_table>
+		<csh_table>tx_d3evgtools_domain_model_contentcontent</csh_table>
 	</meta>
 	<data type="array">
 	<languageKey index="default" type="array">
 	   
-			<label index="content_content.description">contentContent</label>
+			<label index="page.description">page</label>
 		</languageKey>
 	</data>
 </T3locallang>

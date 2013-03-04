@@ -31,7 +31,33 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_D3Evgtools_Domain_Repository_RandomContentRepository extends Tx_D3Evgtools_Domain_Repository_AbstractRepository {
+class Tx_D3Evgtools_Controller_ContentContentController extends Tx_Extbase_MVC_Controller_ActionController {
+
+	/**
+	 * contentContentRepository
+	 *
+	 * @var Tx_D3Evgtools_Domain_Repository_ContentContentRepository
+	 */
+	protected $contentContentRepository;
+
+	/**
+	 * injectContentContentRepository
+	 *
+	 * @param Tx_D3Evgtools_Domain_Repository_ContentContentRepository $contentContentRepository
+	 * @return void
+	 */
+	public function injectContentContentRepository(Tx_D3Evgtools_Domain_Repository_ContentContentRepository $contentContentRepository) {
+		$this->contentContentRepository = $contentContentRepository;
+	}
+
+	/**
+	 * action showcontent
+	 *
+	 * @return void
+	 */
+	public function showcontentAction() {
+
+	}
 
 }
 ?>

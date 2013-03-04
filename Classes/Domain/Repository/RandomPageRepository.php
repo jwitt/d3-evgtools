@@ -33,6 +33,5 @@
  */
 class Tx_D3Evgtools_Domain_Repository_RandomPageRepository extends Tx_D3Evgtools_Domain_Repository_AbstractRepository {
 
-
 }
 ?>

@@ -53,6 +53,13 @@
 			<label index="tx_d3evgtools_domain_model_accordioncontent.title">Title</label>
 			<label index="tx_d3evgtools_domain_model_accordioncontent.content">Content</label>
 
+			<label index="tx_d3evgtools_domain_model_cntcontent">Cnt Content</label>
+			<label index="tx_d3evgtools_domain_model_cntcontent.content_content">Content Content</label>
+			<label index="tt_content.tx_extbase_type.Tx_D3Evgtools_CntContent">EVG Tools CntContent</label>
+			
+			<label index="tx_d3evgtools_domain_model_contentcontent">Content Content</label>
+			<label index="tx_d3evgtools_domain_model_contentcontent.page">Page</label>
+
 		</languageKey>
 	</data>
 </T3locallang>

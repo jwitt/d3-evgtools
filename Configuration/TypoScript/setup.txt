@@ -136,6 +136,24 @@ tt_content.Tx_D3Evgtools_CntCntSlider {
 	view =< plugin.tx_d3evgtools.view
 }
 
+tt_content.Tx_D3Evgtools_CntContent >
+tt_content.Tx_D3Evgtools_CntContent = USER
+tt_content.Tx_D3Evgtools_CntContent {
+	userFunc = tx_extbase_core_bootstrap->run
+	pluginName = Pi1
+	extensionName = D3Evgtools
+	controller = ContentContent
+	action = get
+	switchableControllerActions {
+		ContentContent {
+			1 = showContent
+		}
+	}
+	settings =< plugin.tx_d3evgtools.settings
+	persistence =< plugin.tx_d3evgtools.persistence
+	view =< plugin.tx_d3evgtools.view
+}
+
 tt_content.Tx_D3Evgtools_CntRandom >
 tt_content.Tx_D3Evgtools_CntRandom = USER
 tt_content.Tx_D3Evgtools_CntRandom {
@@ -191,6 +209,13 @@ plugin.tx_d3evgtools.persistence.classes{
 			columns {
 				 sorting.mapOnProperty = sorting
 				 cntbookslider.mapOnProperty = contentUid
+			}
+		}	   
+		Tx_D3Evgtools_Domain_Model_ContentContent.mapping {
+			tableName = tx_d3evgtools_domain_model_contentcontent
+			columns {
+				 sorting.mapOnProperty = sorting
+				 cntaccordion.mapOnProperty = contentUid
 			}
 		}	   
 		Tx_D3Evgtools_Domain_Model_AccordionContent.mapping {

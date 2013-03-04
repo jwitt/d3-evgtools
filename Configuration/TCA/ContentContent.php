@@ -3,13 +3,13 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$TCA['tx_d3evgtools_domain_model_accordioncontent'] = array(
-	'ctrl' => $TCA['tx_d3evgtools_domain_model_accordioncontent']['ctrl'],
+$TCA['tx_d3evgtools_domain_model_contentcontent'] = array(
+	'ctrl' => $TCA['tx_d3evgtools_domain_model_contentcontent']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, title, content',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, page',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, title, content,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, page,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -37,8 +37,8 @@ $TCA['tx_d3evgtools_domain_model_accordioncontent'] = array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_d3evgtools_domain_model_accordioncontent',
-				'foreign_table_where' => 'AND tx_d3evgtools_domain_model_accordioncontent.pid=###CURRENT_PID### AND tx_d3evgtools_domain_model_accordioncontent.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_d3evgtools_domain_model_contentcontent',
+				'foreign_table_where' => 'AND tx_d3evgtools_domain_model_contentcontent.pid=###CURRENT_PID### AND tx_d3evgtools_domain_model_contentcontent.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -93,59 +93,24 @@ $TCA['tx_d3evgtools_domain_model_accordioncontent'] = array(
 				),
 			),
 		),
-		'name' => array(
+		'page' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_accordioncontent.name',
-			'config' => array(
-				'type' => 'input',
-				'size' => 30,
-				'eval' => 'trim'
-			),
-		),
-		'title' => array(
-			'exclude' => 0,
-			'label' => 'LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_accordioncontent.title',
-			'config' => array(
-				'type' => 'text',
-				'cols' => 40,
-				'rows' => 15,
-				'eval' => 'trim',
-				'wizards' => array(
-					'RTE' => array(
-						'icon' => 'wizard_rte2.gif',
-						'notNewRecords'=> 1,
-						'RTEonly' => 1,
-						'script' => 'wizard_rte.php',
-						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
-						'type' => 'script'
-					)
-				)
-			),
-			'defaultExtras' => 'richtext:rte_transform[flag=rte_enabled|mode=ts]',
-		),
-		'content' => array(
-			'exclude' => 0,
-			'label' => 'LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_accordioncontent.content',
+			'label' => 'LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_contentcontent.page',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
 				'rows' => 15,
 				'eval' => 'trim'
-			),
-		),
-		'cntaccordion' => array(
-			'config' => array(
-				'type' => 'passthrough',
 			),
 		),
 	),
 );
 
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
-$TCA['tx_d3evgtools_domain_model_accordioncontent']['columns']['content']['config'] = array(
+$TCA['tx_d3evgtools_domain_model__contentcontent']['columns']['page']['config'] = array(
 			'type' => 'group',
 			'internal_type' => 'db',
-			'allowed' => 'tt_content',
+			'allowed' => 'pages',
 			'size' => '1',
 			'maxitems' => '1',
 			'minitems' => '0',
@@ -156,4 +121,6 @@ $TCA['tx_d3evgtools_domain_model_accordioncontent']['columns']['content']['confi
 				),
 			),
 	);
+
+
 ?>

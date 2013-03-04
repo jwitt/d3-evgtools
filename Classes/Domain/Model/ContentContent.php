@@ -31,7 +31,33 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_D3Evgtools_Domain_Repository_RandomContentRepository extends Tx_D3Evgtools_Domain_Repository_AbstractRepository {
+class Tx_D3Evgtools_Domain_Model_ContentContent extends Tx_D3Evgtools_Domain_Model_Abstract {
+
+	/**
+	 * page
+	 *
+	 * @var string
+	 */
+	protected $page;
+
+	/**
+	 * Returns the page
+	 *
+	 * @return string $page
+	 */
+	public function getPage() {
+		return $this->page;
+	}
+
+	/**
+	 * Sets the page
+	 *
+	 * @param string $page
+	 * @return void
+	 */
+	public function setPage($page) {
+		$this->page = $page;
+	}
 
 }
 ?>

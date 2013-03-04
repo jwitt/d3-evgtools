@@ -66,7 +66,7 @@ t3lib_extMgm::addTCAcolumns('tt_content',$tmp_d3_evgtools_columns);
 $TCA['tt_content']['columns'][$TCA['tt_content']['ctrl']['type']]['config']['items'][] = array('LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tt_content.tx_extbase_type.Tx_D3Evgtools_CntBookSlider','Tx_D3Evgtools_CntBookSlider');
 
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntBookSlider']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntBookSlider']['showitem'] .= ',hidden,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntbookslider,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntBookSlider']['showitem'] .= ',--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntbookslider,';
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntBookSlider']['showitem'] .= 'book_sliders';
 
 $tmp_d3_evgtools_columns = array(
@@ -273,7 +273,7 @@ $tmp_d3_evgtools_columns = array(
 			'foreign_field' => 'cntaccordion',
 			'maxitems'      => 9999,
 			'appearance' => array(
-				'collapseAll' => 1,
+				'collapseAll' => 0,
 				'levelLinksPosition' => 'top',
 				'showSynchronizationLink' => 1,
 				'showPossibleLocalizationRecords' => 1,
@@ -317,6 +317,64 @@ $TCA['tx_d3evgtools_domain_model_accordioncontent'] = array(
 		'searchFields' => 'name,title,content,',
 		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/AccordionContent.php',
 		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_d3evgtools_domain_model_accordioncontent.gif'
+	),
+);
+
+$tmp_d3_evgtools_columns = array(
+
+	'content_content' => array(
+		'exclude' => 0,
+		'label' => 'LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntcontent.content_content',
+		'config' => array(
+			'type' => 'inline',
+			'foreign_table' => '',
+			'minitems' => 0,
+			'maxitems' => 1,
+			'appearance' => array(
+				'collapseAll' => 0,
+				'levelLinksPosition' => 'top',
+				'showSynchronizationLink' => 1,
+				'showPossibleLocalizationRecords' => 1,
+				'showAllLocalizationLink' => 1
+			),
+		),
+	),
+);
+
+t3lib_extMgm::addTCAcolumns('tt_content',$tmp_d3_evgtools_columns);
+
+$TCA['tt_content']['columns'][$TCA['tt_content']['ctrl']['type']]['config']['items'][] = array('LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tt_content.tx_extbase_type.Tx_D3Evgtools_CntContent','Tx_D3Evgtools_CntContent');
+
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntContent']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntContent']['showitem'] .= ',hidden,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntcontent,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntContent']['showitem'] .= 'content_content';
+
+t3lib_extMgm::addLLrefForTCAdescr('tx_d3evgtools_domain_model_contentcontent', 'EXT:d3_evgtools/Resources/Private/Language/locallang_csh_tx_d3evgtools_domain_model_contentcontent.xml');
+t3lib_extMgm::allowTableOnStandardPages('tx_d3evgtools_domain_model_contentcontent');
+$TCA['tx_d3evgtools_domain_model_contentcontent'] = array(
+	'ctrl' => array(
+		'title'	=> 'LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_contentcontent',
+		'label' => 'page',
+		'tstamp' => 'tstamp',
+		'crdate' => 'crdate',
+		'cruser_id' => 'cruser_id',
+		'dividers2tabs' => TRUE,
+		'sortby' => 'sorting',
+		'versioningWS' => 2,
+		'versioning_followPages' => TRUE,
+		'origUid' => 't3_origuid',
+		'languageField' => 'sys_language_uid',
+		'transOrigPointerField' => 'l10n_parent',
+		'transOrigDiffSourceField' => 'l10n_diffsource',
+		'delete' => 'deleted',
+		'enablecolumns' => array(
+			'disabled' => 'hidden',
+			'starttime' => 'starttime',
+			'endtime' => 'endtime',
+		),
+		'searchFields' => 'page,',
+		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/ContentContent.php',
+		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_d3evgtools_domain_model_contentcontent.gif'
 	),
 );
 

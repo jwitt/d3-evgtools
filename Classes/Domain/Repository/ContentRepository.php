@@ -33,12 +33,11 @@
  */
 class Tx_D3Evgtools_Domain_Repository_ContentRepository extends Tx_D3Evgtools_Domain_Repository_AbstractRepository {
 
-
 	/**
 	 * findByPidAndColpos
 	 *
-	 * @param  $pid
-	 * @param  $colpos
+	 * @param $pid
+	 * @param $colpos
 	 * @return
 	 */
 	public function findByPidAndColpos($pid, $colpos) {

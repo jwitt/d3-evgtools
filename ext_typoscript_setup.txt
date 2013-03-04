@@ -37,6 +37,13 @@ config.tx_extbase{
                 }
             }
             
+            Tx_D3Evgtools_Domain_Model_CntContent {
+                mapping {
+                    tableName = tt_content
+                    recordType = Tx_D3Evgtools_CntContent
+                }
+            }
+            
     	}
     }
 }

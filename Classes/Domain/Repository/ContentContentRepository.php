@@ -31,7 +31,7 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_D3Evgtools_Domain_Repository_RandomContentRepository extends Tx_D3Evgtools_Domain_Repository_AbstractRepository {
+class Tx_D3Evgtools_Domain_Repository_ContentContentRepository extends Tx_D3Evgtools_Domain_Repository_AbstractRepository {
 
 }
 ?>

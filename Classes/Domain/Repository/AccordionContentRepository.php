@@ -32,5 +32,6 @@
  *
  */
 class Tx_D3Evgtools_Domain_Repository_AccordionContentRepository extends Tx_D3Evgtools_Domain_Repository_AbstractRepository {
+
 }
 ?>
