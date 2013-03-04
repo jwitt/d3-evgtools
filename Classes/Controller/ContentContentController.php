@@ -66,18 +66,24 @@ class Tx_D3Evgtools_Controller_ContentContentController extends Tx_Extbase_MVC_C
 			if($pid){
 				$GLOBALS['TSFE']->fe_user->setKey('ses','page',$pid);
 				$GLOBALS["TSFE"]->storeSessionData();
+				$pid = 0;
 			}else{
 				$pid = $GLOBALS['TSFE']->fe_user->getKey('ses','page');
+				if(!$pid){
+					$pid = $this->settings['defaultHomePagePid'];
+				}	
 			}
-			if(!$pid){
-				$pid = $this->settings['defaultHomePagePid'];
-			}	
-			$pageContents = $contentRepository->findByPidAndColpos($pid,0);//$content->getColpos());
-			foreach($pageContents as $c){
-			   $contentArray[] = $c;
+			if($pid){
+				$pageContents = $contentRepository->findByPidAndColpos($pid,$content->getColpos());
+				foreach($pageContents as $c){
+				   $contentArray[] = $c;
+				}	
 			}	
 		}
 		$this->view->assign('contents', $contentArray);
+		$th = substr($this->view->render(),strlen('<div class="tx-d3-evgtools">'));
+		return substr($th,0,strlen($th)-strlen('</div>'));
+		
 	}
 
 }

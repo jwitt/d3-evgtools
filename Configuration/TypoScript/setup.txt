@@ -16,7 +16,7 @@ plugin.tx_d3evgtools {
 }
 
 plugin.tx_d3evgtools.settings {
-	defaultHomePagePid = 1
+	defaultHomePagePid = 15
 
 	contentObject = COA
 	contentObject {

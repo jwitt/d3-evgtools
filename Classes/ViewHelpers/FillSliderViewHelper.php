@@ -12,7 +12,7 @@ class Tx_D3Evgtools_ViewHelpers_FillSliderViewHelper extends Tx_Fluid_Core_ViewH
 	 * @api
 	 */
 	public function render($count, $total, $modulo) {
-		if($total % $modulo <= $count &&  $count < $modulo){
+		if($total % $modulo < $count &&  $count <= $modulo){
 			return true;
 			
 		}
