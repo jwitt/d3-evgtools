@@ -31,7 +31,7 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_D3Evgtools_Domain_Model_CntMagazineSlider extends Tx_Extbase_DomainObject_AbstractEntity {
+class Tx_D3Evgtools_Domain_Model_CntMagazinSlider extends Tx_Extbase_DomainObject_AbstractEntity {
 
 	/**
 	 * magazineSliders

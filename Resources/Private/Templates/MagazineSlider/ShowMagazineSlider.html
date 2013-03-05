@@ -1,0 +1,36 @@
+{namespace d3=Tx_D3Evgtools_ViewHelpers}
+		<f:debug title="pcat">{objIterator}</f:debug>
+
+
+<f:layout name="Default" />
+
+
+<f:section name="main">
+	<div class="magazineSliderWrapper">
+	<div id="magazineSlider">
+		<f:for each="{contents}" as="content" iteration="objIterator" >
+			<div class="magazineSliderElement">
+				<div class="image">
+				<div class="overlayLeft"></div>	
+				<div class="overlayRight"></div>	
+				<f:if condition="<d3:testLink  link='{content.link}' />">
+					<f:then>
+						<f:link.external uri="{content.link}" target="_blank">
+							<f:cObject typoscriptObjectPath="plugin.tx_d3evgtools.settings.magazineSlider.image" data='{content}' />
+						</f:link.external>				
+					</f:then>
+					<f:else>
+						<f:link.page pageUid="{content.link}">
+							<f:cObject typoscriptObjectPath="plugin.tx_d3evgtools.settings.magazineSlider.image" data='{content}' />
+						</f:link.page>
+					</f:else>	
+				</f:if>	
+				</div>	
+				<div class="text">
+					<f:format.html>{content.text}</f:format.html>
+				</div>
+			</div>		
+		</f:for>
+	</div>
+	</div>
+</f:section>

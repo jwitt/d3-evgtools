@@ -56,7 +56,20 @@ class Tx_D3Evgtools_Controller_MagazineSliderController extends Tx_Extbase_MVC_C
 	 * @return void
 	 */
 	public function showMagazineSliderAction() {
-
+		//xdebug_break();
+		$cObjData = $this->configurationManager->getContentObject();
+		$contents =  $this->magazineSliderRepository->findByContentUid((int)$cObjData->data['uid']);
+		$images = array();
+		for($i=0; $i < count($contents);$i++){
+			$image['image'] = $contents[$i]->getImages();
+			$image['text'] = $contents[$i]->getText();
+			$image['imageLeft'] = $i-1 < 0 ? $contents[count($contents)-1]->getImages() :$contents[$i-1]->getImages();
+			$image['imageRight'] = $i >= count($contents)-1? $contents[0]->getImages() : $contents[$i + 1]->getImages();
+			$images[] = $image;
+			
+		}
+		$this->view->assign('contents', $images);
+		//$this->view->assign('contents', $contents);
 	}
 
 }

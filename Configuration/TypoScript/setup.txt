@@ -65,6 +65,52 @@ plugin.tx_d3evgtools.settings {
 		file.import.field = image
 		file.import.listNum = 0
 	}
+	magazineSlider.image = IMAGE
+	magazineSlider.image{
+		file = GIFBUILDER 
+		file{
+			XY = 250,200
+			transparentBackground = 1
+			format = jpg
+			quality = 100
+
+			1 = IMAGE
+			1.offset=0 ,0
+			1.file = fileadmin/templates/img/bg-magazine-slider.png
+			1.file{
+					width=250
+			}	
+			10 = IMAGE
+			10.offset=55,10
+			10.file.import =  uploads/tx_d3evgtools/
+			10.file.import.field = image
+			10.file.treatIdAsReference = 1
+			10.file{
+					width=132
+			}	
+			20 = IMAGE
+			20.offset=-85,10
+			20.file.import =  uploads/tx_d3evgtools/
+			20.file.import.field = imageLeft
+			20.file.treatIdAsReference = 1
+			20.file{
+					width=132
+			}	
+			30 = IMAGE
+			30.offset=196,10
+			30.file.import =  uploads/tx_d3evgtools/
+			30.file.import.field = imageRight
+			30.file.treatIdAsReference = 1
+			30.file{
+					width=132
+			}	
+			//40 = IMAGE
+			//40.offset=214,0
+			//40.file = fileadmin/templates/img/overlay-magazine-slider.png
+			//40.align = r.t
+
+		}	
+	}
 	
 	link{
 		10 = TEXT
@@ -138,9 +184,9 @@ tt_content.Tx_D3Evgtools_CntCntSlider {
 	view =< plugin.tx_d3evgtools.view
 }
 
-tt_content.Tx_D3Evgtools_MagazineSlider >
-tt_content.Tx_D3Evgtools_MagazineSlider = USER
-tt_content.Tx_D3Evgtools_MagazineSlider {
+tt_content.Tx_D3Evgtools_CntMagazinSlider >
+tt_content.Tx_D3Evgtools_CntMagazinSlider = USER
+tt_content.Tx_D3Evgtools_CntMagazinSlider {
 	userFunc = tx_extbase_core_bootstrap->run
 	pluginName = Pi1
 	extensionName = D3Evgtools
@@ -256,7 +302,7 @@ plugin.tx_d3evgtools.persistence.classes{
 			tableName = tx_d3evgtools_domain_model_magazineslider
 			columns {
 				 sorting.mapOnProperty = sorting
-				 cntmagazineslider.mapOnProperty = contentUid
+				 cntmagazinslider.mapOnProperty = contentUid
 			}
 		}	   
 		Tx_D3Evgtools_Domain_Model_RandomContent.mapping {

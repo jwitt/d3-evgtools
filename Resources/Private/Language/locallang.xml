@@ -42,13 +42,15 @@
 			<label index="tx_d3evgtools_domain_model_contentcontent">ContentContent</label>
 			<label index="tx_d3evgtools_domain_model_contentcontent.page">page</label>
 			<label index="tx_d3evgtools_domain_model_contentcontent.col_pos">colPos</label>
-			<label index="tx_d3evgtools_domain_model_cntmagazineslider">CntMagazineSlider</label>
-			<label index="tx_d3evgtools_domain_model_cntmagazineslider.magazine_sliders">magazineSliders</label>
+			<label index="tx_d3evgtools_domain_model_cntmagazinslider">CntMagazinSlider</label>
+			<label index="tx_d3evgtools_domain_model_cntmagazinslider.magazine_sliders">magazineSliders</label>
 			<label index="tx_d3evgtools_domain_model_magazineslider">MagazineSlider</label>
 			<label index="tx_d3evgtools_domain_model_magazineslider.title">title</label>
 			<label index="tx_d3evgtools_domain_model_magazineslider.link">link</label>
 			<label index="tx_d3evgtools_domain_model_magazineslider.images">images</label>
 			<label index="tx_d3evgtools_domain_model_magazineslider.text">text</label>
+			<label index="tx_d3evgtools_domain_model_cntmagazineslider">CntMagazineSlider</label>
+			<label index="tx_d3evgtools_domain_model_cntmagazineslider.magazine_sliders">magazineSliders</label>
 			<label index="tx_d3evgtools_domain_model_contentbookslider">ContentBookSlider</label>
 			<label index="tx_d3evgtools_domain_model_contentbookslider.book_sliders">bookSliders</label>
 			<label index="tx_d3evgtools_domain_model_contentcontslider">ContentContSlider</label>

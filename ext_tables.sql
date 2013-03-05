@@ -338,7 +338,7 @@ CREATE TABLE tx_d3evgtools_domain_model_magazineslider (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
-	cntmagazineslider int(11) unsigned DEFAULT '0' NOT NULL,
+	cntmagazinslider int(11) unsigned DEFAULT '0' NOT NULL,
 
 	title varchar(255) DEFAULT '' NOT NULL,
 	link varchar(255) DEFAULT '' NOT NULL,
@@ -435,7 +435,7 @@ CREATE TABLE tx_d3evgtools_domain_model_contentcontent (
 #
 CREATE TABLE tx_d3evgtools_domain_model_magazineslider (
 
-	cntmagazineslider  int(11) unsigned DEFAULT '0' NOT NULL,
+	cntmagazinslider  int(11) unsigned DEFAULT '0' NOT NULL,
 
 );
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder

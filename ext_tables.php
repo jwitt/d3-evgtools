@@ -382,11 +382,11 @@ $tmp_d3_evgtools_columns = array(
 
 	'magazine_sliders' => array(
 		'exclude' => 0,
-		'label' => 'LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntmagazineslider.magazine_sliders',
+		'label' => 'LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntmagazinslider.magazine_sliders',
 		'config' => array(
 			'type' => 'inline',
 			'foreign_table' => 'tx_d3evgtools_domain_model_magazineslider',
-			'foreign_field' => 'cntmagazineslider',
+			'foreign_field' => 'cntmagazinslider',
 			'maxitems'      => 9999,
 			'appearance' => array(
 				'collapseAll' => 0,
@@ -401,7 +401,7 @@ $tmp_d3_evgtools_columns = array(
 
 t3lib_extMgm::addTCAcolumns('tt_content',$tmp_d3_evgtools_columns);
 
-$TCA['tt_content']['columns'][$TCA['tt_content']['ctrl']['type']]['config']['items'][] = array('LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tt_content.tx_extbase_type.Tx_D3Evgtools_CntMagazineSlider','Tx_D3Evgtools_CntMagazineSlider');
+$TCA['tt_content']['columns'][$TCA['tt_content']['ctrl']['type']]['config']['items'][] = array('LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tt_content.tx_extbase_type.Tx_D3Evgtools_CntMagazinSlider','Tx_D3Evgtools_CntMagazinSlider');
 
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazineSlider']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazineSlider']['showitem'] .= ',--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntmagazineslider,';

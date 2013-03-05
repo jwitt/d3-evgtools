@@ -145,7 +145,7 @@ $TCA['tx_d3evgtools_domain_model_magazineslider'] = array(
 			),
 			'defaultExtras' => 'richtext:rte_transform[flag=rte_enabled|mode=ts]',
 		),
-		'cntmagazineslider' => array(
+		'cntmagazinslider' => array(
 			'config' => array(
 				'type' => 'passthrough',
 			),
