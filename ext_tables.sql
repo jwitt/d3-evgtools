@@ -235,6 +235,7 @@ CREATE TABLE tx_d3evgtools_domain_model_accordioncontent (
 
 	name varchar(255) DEFAULT '' NOT NULL,
 	title text NOT NULL,
+	text text NOT NULL,
 	content text NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,

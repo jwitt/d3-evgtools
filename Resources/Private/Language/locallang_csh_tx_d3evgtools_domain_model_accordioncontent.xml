@@ -10,6 +10,7 @@
 	   
 			<label index="name.description">name</label>
 			<label index="title.description">Title Text</label>
+			<label index="text.description">text</label>
 			<label index="content.description">content</label>
 		</languageKey>
 	</data>

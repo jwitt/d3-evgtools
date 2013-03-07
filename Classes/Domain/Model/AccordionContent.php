@@ -55,6 +55,13 @@ class Tx_D3Evgtools_Domain_Model_AccordionContent extends Tx_D3Evgtools_Domain_M
 	protected $content;
 
 	/**
+	 * text
+	 *
+	 * @var string
+	 */
+	protected $text;
+
+	/**
 	 * Returns the name
 	 *
 	 * @return string $name
@@ -109,6 +116,25 @@ class Tx_D3Evgtools_Domain_Model_AccordionContent extends Tx_D3Evgtools_Domain_M
 	 */
 	public function setContent($content) {
 		$this->content = $content;
+	}
+
+	/**
+	 * Returns the text
+	 *
+	 * @return string $text
+	 */
+	public function getText() {
+		return $this->text;
+	}
+
+	/**
+	 * Sets the text
+	 *
+	 * @param string $text
+	 * @return void
+	 */
+	public function setText($text) {
+		$this->text = $text;
 	}
 
 }

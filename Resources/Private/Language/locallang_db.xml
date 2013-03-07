@@ -51,6 +51,7 @@
 			<label index="tx_d3evgtools_domain_model_accordioncontent">Accordion Content</label>
 			<label index="tx_d3evgtools_domain_model_accordioncontent.name">Name</label>
 			<label index="tx_d3evgtools_domain_model_accordioncontent.title">Title</label>
+			<label index="tx_d3evgtools_domain_model_accordioncontent.text">Text</label>
 			<label index="tx_d3evgtools_domain_model_accordioncontent.content">Content</label>
 
 			<label index="tx_d3evgtools_domain_model_cntcontent">Cnt Content</label>

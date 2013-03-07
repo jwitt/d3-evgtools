@@ -258,7 +258,7 @@ $tmp_d3_evgtools_columns = array(
 		'exclude' => 0,
 		'label' => 'LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntaccordion.active_tab',
 		'config' => array(
-			'type' => 'text',
+			'type' => '',
 			'cols' => 40,
 			'rows' => 15,
 			'eval' => 'trim'
@@ -314,7 +314,7 @@ $TCA['tx_d3evgtools_domain_model_accordioncontent'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'name,title,content,',
+		'searchFields' => 'name,title,text,content,',
 		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/AccordionContent.php',
 		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_d3evgtools_domain_model_accordioncontent.gif'
 	),
@@ -437,4 +437,33 @@ $TCA['tx_d3evgtools_domain_model_magazineslider'] = array(
 );
 
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntBookSlider']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntBookSlider']['showitem'] .= ',hidden,header,layout,section_frame,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntbookslider,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntBookSlider']['showitem'] .= 'book_sliders';
+
+
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntContent']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntContent']['showitem'] .= ',hidden,header,layout,section_frame,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntcontent,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntContent']['showitem'] .= 'content_content';
+
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazineSlider']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazineSlider']['showitem'] .= 'hidden,header,layout,section_frame,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntmagazineslider,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazineSlider']['showitem'] .= 'magazine_sliders';
+
+
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntAccordion']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntAccordion']['showitem'] .= ',header,layout,section_frame,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntaccordion,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntAccordion']['showitem'] .= 'active_tab, accordion_contents';
+
+
+$TCA['tt_content']['types']['Tx_D3Evgtools_Content']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
+$TCA['tt_content']['types']['Tx_D3Evgtools_Content']['showitem'] .= ',header,layout,section_frame,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_content,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_Content']['showitem'] .= '';
+
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntRandom']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntRandom']['showitem'] .= ',header,layout,section_frame,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntrandom,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntRandom']['showitem'] .= 'count, random_contents, random_pages';
+
+
 ?>

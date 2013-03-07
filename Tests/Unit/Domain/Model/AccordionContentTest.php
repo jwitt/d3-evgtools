@@ -87,6 +87,23 @@ class Tx_D3Evgtools_Domain_Model_AccordionContentTest extends Tx_Extbase_Tests_U
 	/**
 	 * @test
 	 */
+	public function getTextReturnsInitialValueForString() { }
+
+	/**
+	 * @test
+	 */
+	public function setTextForStringSetsText() { 
+		$this->fixture->setText('Conceived at T3CON10');
+
+		$this->assertSame(
+			'Conceived at T3CON10',
+			$this->fixture->getText()
+		);
+	}
+	
+	/**
+	 * @test
+	 */
 	public function getContentReturnsInitialValueForString() { }
 
 	/**

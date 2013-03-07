@@ -83,7 +83,34 @@ class Tx_D3Evgtools_Controller_ContentContentController extends Tx_Extbase_MVC_C
 		$this->view->assign('contents', $contentArray);
 		$th = substr($this->view->render(),strlen('<div class="tx-d3-evgtools">'));
 		return substr($th,0,strlen($th)-strlen('</div>'));
+		
+		//this->checkLifetimeCookie('mycookiename', 60 * 60 * 24 * 7);
 	}
 
+	
+	private function checkLifetimeCookie($cookiename, $lifetime) {
+		if((isset($_COOKIE[$cookiename]) && isset($_COOKIE['fe_typo_user']) && $_COOKIE[$cookiename] != $_COOKIE['fe_typo_user']) || (isset($_COOKIE[$cookiename]) && !isset($_COOKIE['fe_typo_user']))) {
+			setcookie('fe_typo_user', $_COOKIE[$cookiename], 0, '/');
+			header('Location: '.$_SERVER['REQUEST_URI']);
+		}
+		if(!isset($_COOKIE[$cookiename]) && isset($_COOKIE['fe_typo_user'])) {
+			$selectFields = 'hash';
+			$fromTable    = 'fe_session_data';
+			$whereClause  = 'hash = "'.$this->mysqlEscape($_COOKIE['fe_typo_user']).'"';
+			$groupBy      = '';
+			$orderBy      = '';
+			$limit        = '1';
+			$ses = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows($selectFields,$fromTable,$whereClause,$groupBy,$orderBy,$limit);
+			if(count($ses) == 1) {
+				setcookie($cookiename, $_COOKIE['fe_typo_user'], time() + $lifetime, '/');
+			}
+		}
+	}
+
+	private function mysqlEscape($value) {
+		return mysql_real_escape_string($value);
+	}	
+	
+	
 }
 ?>

@@ -61,7 +61,7 @@ class Tx_D3Evgtools_Controller_AccordionContentController extends Tx_Extbase_MVC
 		$contents =  $this->accordionContentRepository->findByContentUid((int)$cObjData->data['uid']);
 		$contentRepository = $this->objectManager->get('Tx_D3Evgtools_Domain_Repository_ContentRepository');
 		foreach($contents as $content){
-			$contentArray[] = array('tabId'=>$content->getUid(),'title'=>$content->getTitle(),  'content'=>$contentRepository->findByUid($content->getContent()));
+			$contentArray[] = array('tabId'=>$content->getUid(),'title'=>$content->getTitle(),'text'=>$content->getText(),  'content'=>$contentRepository->findByUid($content->getContent()));
 		}
 		;
 		$this->view->assign('activeTab', $cObjData->data['active_tab']);
