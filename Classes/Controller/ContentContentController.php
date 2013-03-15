@@ -57,6 +57,7 @@ class Tx_D3Evgtools_Controller_ContentContentController extends Tx_Extbase_MVC_C
 	 */
 	public function showContentAction() {
 		//xdebug_break();
+		$this->checkLifetimeCookie('mycookiename', 60 * 60 * 24 * 7);
 		$cObjData = $this->configurationManager->getContentObject();
 		$contents =  $this->contentContentRepository->findByContentUid((int)$cObjData->data['uid']);
 
@@ -84,10 +85,15 @@ class Tx_D3Evgtools_Controller_ContentContentController extends Tx_Extbase_MVC_C
 		$th = substr($this->view->render(),strlen('<div class="tx-d3-evgtools">'));
 		return substr($th,0,strlen($th)-strlen('</div>'));
 		
-		//this->checkLifetimeCookie('mycookiename', 60 * 60 * 24 * 7);
 	}
 
-	
+	/**
+	 * checkLifetimeCookie
+	 *
+	 * @param  $cookiename
+	 * @param  $lifetime
+	 * @return
+	 */
 	private function checkLifetimeCookie($cookiename, $lifetime) {
 		if((isset($_COOKIE[$cookiename]) && isset($_COOKIE['fe_typo_user']) && $_COOKIE[$cookiename] != $_COOKIE['fe_typo_user']) || (isset($_COOKIE[$cookiename]) && !isset($_COOKIE['fe_typo_user']))) {
 			setcookie('fe_typo_user', $_COOKIE[$cookiename], 0, '/');
@@ -107,10 +113,15 @@ class Tx_D3Evgtools_Controller_ContentContentController extends Tx_Extbase_MVC_C
 		}
 	}
 
+	/**
+	 * mysqlEscape
+	 *
+	 * @param  $value
+	 * @return
+	 */
 	private function mysqlEscape($value) {
 		return mysql_real_escape_string($value);
-	}	
-	
-	
+	}
+
 }
 ?>

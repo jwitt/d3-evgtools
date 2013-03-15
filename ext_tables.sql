@@ -218,7 +218,7 @@ CREATE TABLE tt_content (
 #
 CREATE TABLE tt_content (
 
-	active_tab text NOT NULL,
+	active_tab int(11) DEFAULT '0' NOT NULL,
 	accordion_contents int(11) unsigned DEFAULT '0' NOT NULL,
 
 );

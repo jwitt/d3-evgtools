@@ -51,7 +51,7 @@ $tmp_d3_evgtools_columns = array(
 			'foreign_field' => 'cntbookslider',
 			'maxitems'      => 9999,
 			'appearance' => array(
-				'collapseAll' => 0,
+				'collapseAll' => 1,
 				'levelLinksPosition' => 'top',
 				'showSynchronizationLink' => 1,
 				'showPossibleLocalizationRecords' => 1,
@@ -66,7 +66,7 @@ t3lib_extMgm::addTCAcolumns('tt_content',$tmp_d3_evgtools_columns);
 $TCA['tt_content']['columns'][$TCA['tt_content']['ctrl']['type']]['config']['items'][] = array('LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tt_content.tx_extbase_type.Tx_D3Evgtools_CntBookSlider','Tx_D3Evgtools_CntBookSlider');
 
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntBookSlider']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntBookSlider']['showitem'] .= ',hidden,header,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntbookslider,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntBookSlider']['showitem'] .= ',--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntbookslider,';
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntBookSlider']['showitem'] .= 'book_sliders';
 
 $tmp_d3_evgtools_columns = array(
@@ -80,7 +80,7 @@ $tmp_d3_evgtools_columns = array(
 			'foreign_field' => 'cntcntslider',
 			'maxitems'      => 9999,
 			'appearance' => array(
-				'collapseAll' => 0,
+				'collapseAll' => 1,
 				'levelLinksPosition' => 'top',
 				'showSynchronizationLink' => 1,
 				'showPossibleLocalizationRecords' => 1,
@@ -95,7 +95,7 @@ t3lib_extMgm::addTCAcolumns('tt_content',$tmp_d3_evgtools_columns);
 $TCA['tt_content']['columns'][$TCA['tt_content']['ctrl']['type']]['config']['items'][] = array('LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tt_content.tx_extbase_type.Tx_D3Evgtools_CntCntSlider','Tx_D3Evgtools_CntCntSlider');
 
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntCntSlider']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntCntSlider']['showitem'] .= ',hidden,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntcntslider,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntCntSlider']['showitem'] .= ',--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntcntslider,';
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntCntSlider']['showitem'] .= 'content_sliders';
 
 t3lib_extMgm::addLLrefForTCAdescr('tx_d3evgtools_domain_model_contentslider', 'EXT:d3_evgtools/Resources/Private/Language/locallang_csh_tx_d3evgtools_domain_model_contentslider.xml');
@@ -147,7 +147,7 @@ $tmp_d3_evgtools_columns = array(
 			'foreign_field' => 'cntrandom',
 			'maxitems'      => 9999,
 			'appearance' => array(
-				'collapseAll' => 0,
+				'collapseAll' => 1,
 				'levelLinksPosition' => 'top',
 				'showSynchronizationLink' => 1,
 				'showPossibleLocalizationRecords' => 1,
@@ -164,7 +164,7 @@ $tmp_d3_evgtools_columns = array(
 			'foreign_field' => 'cntrandom',
 			'maxitems'      => 9999,
 			'appearance' => array(
-				'collapseAll' => 0,
+				'collapseAll' => 1,
 				'levelLinksPosition' => 'top',
 				'showSynchronizationLink' => 1,
 				'showPossibleLocalizationRecords' => 1,
@@ -179,7 +179,7 @@ t3lib_extMgm::addTCAcolumns('tt_content',$tmp_d3_evgtools_columns);
 $TCA['tt_content']['columns'][$TCA['tt_content']['ctrl']['type']]['config']['items'][] = array('LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tt_content.tx_extbase_type.Tx_D3Evgtools_CntRandom','Tx_D3Evgtools_CntRandom');
 
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntRandom']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntRandom']['showitem'] .= ',hidden,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntrandom,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntRandom']['showitem'] .= ',--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntrandom,';
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntRandom']['showitem'] .= 'count, random_contents, random_pages';
 
 t3lib_extMgm::addLLrefForTCAdescr('tx_d3evgtools_domain_model_randomcontent', 'EXT:d3_evgtools/Resources/Private/Language/locallang_csh_tx_d3evgtools_domain_model_randomcontent.xml');
@@ -249,7 +249,7 @@ t3lib_extMgm::addTCAcolumns('tt_content',$tmp_d3_evgtools_columns);
 $TCA['tt_content']['columns'][$TCA['tt_content']['ctrl']['type']]['config']['items'][] = array('LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tt_content.tx_extbase_type.Tx_D3Evgtools_Content','Tx_D3Evgtools_Content');
 
 $TCA['tt_content']['types']['Tx_D3Evgtools_Content']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
-$TCA['tt_content']['types']['Tx_D3Evgtools_Content']['showitem'] .= ',hidden,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_content,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_Content']['showitem'] .= ',--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_content,';
 $TCA['tt_content']['types']['Tx_D3Evgtools_Content']['showitem'] .= '';
 
 $tmp_d3_evgtools_columns = array(
@@ -258,10 +258,9 @@ $tmp_d3_evgtools_columns = array(
 		'exclude' => 0,
 		'label' => 'LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntaccordion.active_tab',
 		'config' => array(
-			'type' => '',
-			'cols' => 40,
-			'rows' => 15,
-			'eval' => 'trim'
+			'type' => 'input',
+			'size' => 4,
+			'eval' => 'int'
 		),
 	),
 	'accordion_contents' => array(
@@ -273,7 +272,7 @@ $tmp_d3_evgtools_columns = array(
 			'foreign_field' => 'cntaccordion',
 			'maxitems'      => 9999,
 			'appearance' => array(
-				'collapseAll' => 0,
+				'collapseAll' => 1,
 				'levelLinksPosition' => 'top',
 				'showSynchronizationLink' => 1,
 				'showPossibleLocalizationRecords' => 1,
@@ -288,7 +287,7 @@ t3lib_extMgm::addTCAcolumns('tt_content',$tmp_d3_evgtools_columns);
 $TCA['tt_content']['columns'][$TCA['tt_content']['ctrl']['type']]['config']['items'][] = array('LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tt_content.tx_extbase_type.Tx_D3Evgtools_CntAccordion','Tx_D3Evgtools_CntAccordion');
 
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntAccordion']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntAccordion']['showitem'] .= ',hidden,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntaccordion,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntAccordion']['showitem'] .= ',--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntaccordion,';
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntAccordion']['showitem'] .= 'active_tab, accordion_contents';
 
 t3lib_extMgm::addLLrefForTCAdescr('tx_d3evgtools_domain_model_accordioncontent', 'EXT:d3_evgtools/Resources/Private/Language/locallang_csh_tx_d3evgtools_domain_model_accordioncontent.xml');
@@ -331,7 +330,7 @@ $tmp_d3_evgtools_columns = array(
 			'foreign_field' => 'cntcontent',
 			'maxitems'      => 9999,
 			'appearance' => array(
-				'collapseAll' => 0,
+				'collapseAll' => 1,
 				'levelLinksPosition' => 'top',
 				'showSynchronizationLink' => 1,
 				'showPossibleLocalizationRecords' => 1,
@@ -346,7 +345,7 @@ t3lib_extMgm::addTCAcolumns('tt_content',$tmp_d3_evgtools_columns);
 $TCA['tt_content']['columns'][$TCA['tt_content']['ctrl']['type']]['config']['items'][] = array('LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tt_content.tx_extbase_type.Tx_D3Evgtools_CntContent','Tx_D3Evgtools_CntContent');
 
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntContent']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntContent']['showitem'] .= ',hidden,header,layout,section_frame,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntcontent,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntContent']['showitem'] .= ',--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntcontent,';
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntContent']['showitem'] .= 'content_content';
 
 t3lib_extMgm::addLLrefForTCAdescr('tx_d3evgtools_domain_model_contentcontent', 'EXT:d3_evgtools/Resources/Private/Language/locallang_csh_tx_d3evgtools_domain_model_contentcontent.xml');
@@ -389,7 +388,7 @@ $tmp_d3_evgtools_columns = array(
 			'foreign_field' => 'cntmagazinslider',
 			'maxitems'      => 9999,
 			'appearance' => array(
-				'collapseAll' => 0,
+				'collapseAll' => 1,
 				'levelLinksPosition' => 'top',
 				'showSynchronizationLink' => 1,
 				'showPossibleLocalizationRecords' => 1,
@@ -403,9 +402,9 @@ t3lib_extMgm::addTCAcolumns('tt_content',$tmp_d3_evgtools_columns);
 
 $TCA['tt_content']['columns'][$TCA['tt_content']['ctrl']['type']]['config']['items'][] = array('LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tt_content.tx_extbase_type.Tx_D3Evgtools_CntMagazinSlider','Tx_D3Evgtools_CntMagazinSlider');
 
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazineSlider']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazineSlider']['showitem'] .= ',--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntmagazineslider,';
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazineSlider']['showitem'] .= 'magazine_sliders';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazinSlider']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazinSlider']['showitem'] .= ',--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntmagazinslider,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazinSlider']['showitem'] .= 'magazine_sliders';
 
 t3lib_extMgm::addLLrefForTCAdescr('tx_d3evgtools_domain_model_magazineslider', 'EXT:d3_evgtools/Resources/Private/Language/locallang_csh_tx_d3evgtools_domain_model_magazineslider.xml');
 t3lib_extMgm::allowTableOnStandardPages('tx_d3evgtools_domain_model_magazineslider');
@@ -439,31 +438,35 @@ $TCA['tx_d3evgtools_domain_model_magazineslider'] = array(
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
 
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntBookSlider']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntBookSlider']['showitem'] .= ',hidden,header,layout,section_frame,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntbookslider,';
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntBookSlider']['showitem'] .= 'book_sliders';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntBookSlider']['showitem'] .= ',hidden,header,';//--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntbookslider,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntBookSlider']['showitem'] .= '--div--;Buch Slider Elemente, book_sliders,--div--;Layout,layout,section_frame,colPos';
 
 
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntContent']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntContent']['showitem'] .= ',hidden,header,layout,section_frame,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntcontent,';
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntContent']['showitem'] .= 'content_content';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntContent']['showitem'] .= ',hidden,header,';//--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntcontent,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntContent']['showitem'] .= '--div--;Inhalts Elemente, content_content,--div--;Layout,layout,section_frame,colPos';
 
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazineSlider']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazineSlider']['showitem'] .= 'hidden,header,layout,section_frame,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntmagazineslider,';
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazineSlider']['showitem'] .= 'magazine_sliders';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazinSlider']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazinSlider']['showitem'] .= ',hidden,header,';//--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntmagazineslider,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntMagazinSlider']['showitem'] .= '--div--;Magazin Elemente,magazine_sliders,--div--;Layout,layout,section_frame,colPos';
 
 
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntAccordion']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntAccordion']['showitem'] .= ',header,layout,section_frame,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntaccordion,';
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntAccordion']['showitem'] .= 'active_tab, accordion_contents';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntAccordion']['showitem'] .= ',hidden,header,';//--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntaccordion,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntAccordion']['showitem'] .= '--div--;Accordion Elemente,active_tab, accordion_contents,--div--;Layout,layout,section_frame,colPos';
 
 
 $TCA['tt_content']['types']['Tx_D3Evgtools_Content']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
-$TCA['tt_content']['types']['Tx_D3Evgtools_Content']['showitem'] .= ',header,layout,section_frame,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_content,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_Content']['showitem'] .= ',header,layout,section_frame,colPos,';//--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_content,';
 $TCA['tt_content']['types']['Tx_D3Evgtools_Content']['showitem'] .= '';
 
 $TCA['tt_content']['types']['Tx_D3Evgtools_CntRandom']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntRandom']['showitem'] .= ',header,layout,section_frame,colPos,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntrandom,';
-$TCA['tt_content']['types']['Tx_D3Evgtools_CntRandom']['showitem'] .= 'count, random_contents, random_pages';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntRandom']['showitem'] .= ',hidden,header,';//--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntrandom,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntRandom']['showitem'] .= 'count, random_contents, random_pages,--div--;Layout,layout,section_frame,colPos';
+
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntCntSlider']['showitem'] = $TCA['tt_content']['types']['1']['showitem'];
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntCntSlider']['showitem'] .= ',hidden,header,';//,--div--;LLL:EXT:d3_evgtools/Resources/Private/Language/locallang_db.xml:tx_d3evgtools_domain_model_cntcntslider,';
+$TCA['tt_content']['types']['Tx_D3Evgtools_CntCntSlider']['showitem'] .= '--div--;Slider Elemente,content_sliders,--div--;Layout,layout,section_frame,colPos';
 
 
 ?>

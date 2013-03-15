@@ -56,7 +56,6 @@ class Tx_D3Evgtools_Controller_RandomContentController extends Tx_Extbase_MVC_Co
 	 * @return void
 	 */
 	public function showRandomContentAction() {
-		//xdebug_break();
 		$cObjData = $this->configurationManager->getContentObject();
 		$contents =  $this->randomContentRepository->findByContentUid((int)$cObjData->data['uid']);
 		$contentRepository = $this->objectManager->get('Tx_D3Evgtools_Domain_Repository_ContentRepository');
@@ -74,7 +73,11 @@ class Tx_D3Evgtools_Controller_RandomContentController extends Tx_Extbase_MVC_Co
 			}	
 			
 		}
-		$this->view->assign('contents', $contentArray);
+		$randKeys = array_rand($contentArray,2);
+		foreach($randKeys as $key){
+			$randomContentArray[] = $contentArray[$key];
+		}
+		$this->view->assign('contents', $randomContentArray);
 	}
 
 }

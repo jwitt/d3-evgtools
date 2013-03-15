@@ -53,16 +53,21 @@ class Tx_D3Evgtools_Domain_Model_CntAccordionTest extends Tx_Extbase_Tests_Unit_
 	/**
 	 * @test
 	 */
-	public function getActiveTabReturnsInitialValueForString() { }
+	public function getActiveTabReturnsInitialValueForInteger() { 
+		$this->assertSame(
+			0,
+			$this->fixture->getActiveTab()
+		);
+	}
 
 	/**
 	 * @test
 	 */
-	public function setActiveTabForStringSetsActiveTab() { 
-		$this->fixture->setActiveTab('Conceived at T3CON10');
+	public function setActiveTabForIntegerSetsActiveTab() { 
+		$this->fixture->setActiveTab(12);
 
 		$this->assertSame(
-			'Conceived at T3CON10',
+			12,
 			$this->fixture->getActiveTab()
 		);
 	}

@@ -36,7 +36,7 @@ class Tx_D3Evgtools_Domain_Model_CntAccordion extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * activeTab
 	 *
-	 * @var string
+	 * @var integer
 	 */
 	protected $activeTab;
 
@@ -69,25 +69,6 @@ class Tx_D3Evgtools_Domain_Model_CntAccordion extends Tx_Extbase_DomainObject_Ab
 		 * You may modify the constructor of this class instead
 		 */
 		$this->accordionContents = new Tx_Extbase_Persistence_ObjectStorage();
-	}
-
-	/**
-	 * Returns the activeTab
-	 *
-	 * @return string $activeTab
-	 */
-	public function getActiveTab() {
-		return $this->activeTab;
-	}
-
-	/**
-	 * Sets the activeTab
-	 *
-	 * @param string $activeTab
-	 * @return void
-	 */
-	public function setActiveTab($activeTab) {
-		$this->activeTab = $activeTab;
 	}
 
 	/**
@@ -127,6 +108,25 @@ class Tx_D3Evgtools_Domain_Model_CntAccordion extends Tx_Extbase_DomainObject_Ab
 	 */
 	public function setAccordionContents(Tx_Extbase_Persistence_ObjectStorage $accordionContents) {
 		$this->accordionContents = $accordionContents;
+	}
+
+	/**
+	 * Returns the activeTab
+	 *
+	 * @return integer activeTab
+	 */
+	public function getActiveTab() {
+		return $this->activeTab;
+	}
+
+	/**
+	 * Sets the activeTab
+	 *
+	 * @param integer $activeTab
+	 * @return integer activeTab
+	 */
+	public function setActiveTab($activeTab) {
+		$this->activeTab = $activeTab;
 	}
 
 }

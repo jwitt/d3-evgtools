@@ -48,18 +48,18 @@ class Tx_D3Evgtools_Domain_Model_AccordionContent extends Tx_D3Evgtools_Domain_M
 	protected $title;
 
 	/**
-	 * content
-	 *
-	 * @var string
-	 */
-	protected $content;
-
-	/**
 	 * text
 	 *
 	 * @var string
 	 */
 	protected $text;
+
+	/**
+	 * content
+	 *
+	 * @var string
+	 */
+	protected $content;
 
 	/**
 	 * Returns the name
